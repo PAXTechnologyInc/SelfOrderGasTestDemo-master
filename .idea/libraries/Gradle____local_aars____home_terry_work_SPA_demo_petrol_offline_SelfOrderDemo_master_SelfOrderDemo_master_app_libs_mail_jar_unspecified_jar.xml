@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: __local_aars__:/home/terry/work/SPA/demo/petrol/offline/SelfOrderDemo-master/SelfOrderDemo-master/app/libs/mail.jar:unspecified@jar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/mail.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
