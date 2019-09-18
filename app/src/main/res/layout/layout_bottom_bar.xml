@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/transparency"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/layout_header_shape"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:id="@+id/tvClearOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:background="@color/primary_yellow_color"
+            android:text="@string/clear_order"
+            android:textColor="@color/primary_black_color"
+            android:textSize="@dimen/font_size_smallest"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvCallWaiter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:background="@color/primary_yellow_color"
+            android:text="@string/call_waiter"
+            android:textColor="@color/primary_black_color"
+            android:textSize="@dimen/font_size_smallest"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvShowTableId"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/margin_rignt_normal"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/font_size_normal"
+            />
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/layout_pay"-->
+<!--            android:layout_width="@dimen/textview_topay_width"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvToPay"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="0dp"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                android:layout_marginBottom="0dp"-->
+<!--                android:background="@color/primary_gray_color"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/pay_name"-->
+<!--                android:textColor="@color/primary_black_color"-->
+<!--                android:textSize="@dimen/font_size_normal" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvCount_Pay"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_marginRight="0dp"-->
+<!--                android:background="@drawable/circle_red"-->
+<!--                android:gravity="center"-->
+<!--                android:text="1"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/font_size_smallest_small"-->
+<!--                android:visibility="gone" />-->
+<!--        </RelativeLayout>-->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/img_cart_marginleft">
+
+        <ImageView
+            android:id="@+id/imgCart"
+            android:layout_width="145dp"
+            android:layout_height="114dp"
+            android:layout_alignParentStart="false"
+            android:src="@drawable/icon_cart_disabled" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvCost"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/imgCart"-->
+<!--            android:layout_marginTop="-8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:text="@string/cart_order"-->
+<!--            android:textColor="@color/pay_text_color"-->
+<!--            android:textSize="@dimen/font_size_smallest_small" />-->
+
+        <TextView
+            android:id="@+id/tvCount_Cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imgCart"
+            android:layout_alignTop="@+id/imgCart"
+            android:layout_marginLeft="@dimen/tv_cart_count_marginright"
+            android:background="@drawable/circle_red"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_smallest_small"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

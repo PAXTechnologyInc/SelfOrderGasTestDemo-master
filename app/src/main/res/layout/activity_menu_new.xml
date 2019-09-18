@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/menu_header_layout_fueling"/>
+
+    <FrameLayout
+        android:id="@+id/menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="704dp"
+        android:layout_below="@+id/layout_header">
+
+
+    </FrameLayout>
+
+    <include
+        layout="@layout/layout_bottom_bar"
+        android:layout_width="156dp"
+        android:layout_height="157dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|right" />
+
+</RelativeLayout>

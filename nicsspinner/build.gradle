@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+apply from: '../config/config.gradle'
+
+/**buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.0-alpha09'
+    }
+}
+*/
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+    }
+}
+
+dependencies {
+   // implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:appcompat-v7:'+ ANDROID_SUPPORT_V7
+
+}

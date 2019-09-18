@@ -1,0 +1,123 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="circle_loading_size">240dp</dimen>
+    <dimen name="vertical_padding">5dp</dimen>
+    <dimen name="img_details_height">210dp</dimen>
+    <dimen name="progress_button_height">30dp</dimen>
+    <dimen name="button_cart_width">120dp</dimen>
+    <dimen name="button_height">45dp</dimen>
+    <dimen name="textview_height">45dp</dimen>
+    <dimen name="tablayout_width">90dp</dimen>
+    <dimen name="tablayout_height">105dp</dimen>
+    <dimen name="layout_err_height">36dp</dimen>
+    <dimen name="img_err_width">15dp</dimen>
+    <dimen name="img_err_height">15dp</dimen>
+    <dimen name="layout_tip_info_height">180dp</dimen>
+    <dimen name="wheelview_tip_height">240dp</dimen>
+    <dimen name="img_add_width_large">36dp</dimen>
+    <dimen name="img_add_height_large">36dp</dimen>
+    <dimen name="img_add_width_larger">40dp</dimen>
+    <dimen name="img_add_height_larger">40dp</dimen>
+    <dimen name="img_add_width">24dp</dimen>
+    <dimen name="img_minu_height">24dp</dimen>
+    <dimen name="img_add_padding">8dp</dimen>
+    <dimen name="img_add_padding_normal">2dp</dimen>
+    <dimen name="textview_min_width">24dp</dimen>
+    <dimen name="textview_fulllist_height">19dp</dimen>
+    <dimen name="rv_fulllist_height">225dp</dimen>
+    <dimen name="rv_myitemist_height">163dp</dimen>
+    <dimen name="layout_person_height">36dp</dimen>
+    <dimen name="layout_split_height">132dp</dimen>
+    <dimen name="img_split_width">132dp</dimen>
+    <dimen name="layout_split_way_width">105dp</dimen>
+    <dimen name="layout_split_way_height">60dp</dimen>
+    <dimen name="textview_attr_width">90dp</dimen>
+    <dimen name="textview_attr_height">30dp</dimen>
+    <dimen name="img_item_height">105dp</dimen>
+    <dimen name="rl_spec_width">48dp</dimen>
+    <dimen name="textview_spec_height">24dp</dimen>
+    <dimen name="layout_item_select_height">36dp</dimen>
+    <dimen name="rl_bottom_height">90dp</dimen>
+    <dimen name="layout_cart_height">48dp</dimen>
+    <dimen name="textview_cost_marginleft">10dp</dimen>
+    <dimen name="textview_topay_width">90dp</dimen>
+    <dimen name="img_cart_width">57dp</dimen>
+    <dimen name="img_cart_height">87dp</dimen>
+    <dimen name="img_cart_marginleft">11dp</dimen>
+    <dimen name="tv_cart_count_marginright">40dp</dimen>
+    <dimen name="rl_cart_sum_height">80dp</dimen>
+    <dimen name="spinner_attr_width">160dp</dimen>
+
+    <!-- space -->
+    <dimen name="space_size_smallest">2sp</dimen>
+    <dimen name="space_size_smaller">3dp</dimen>
+    <dimen name="space_size_small">6dp</dimen>
+    <dimen name="space_size_normal">8dp</dimen>
+    <dimen name="space_size_normal_large">12dp</dimen>
+    <dimen name="space_size_large">14dp</dimen>
+    <dimen name="space_size_larger">19sp</dimen>
+    <dimen name="space_height_normal">27dp</dimen>
+    <dimen name="space_height_large">29dp</dimen>
+    <dimen name="space_height_larger">48dp</dimen>
+    <dimen name="space_height_largest">60dp</dimen>
+    <dimen name="space_margin_top_smaller">8dp</dimen>
+    <dimen name="space_margin_top_small">11dp</dimen>
+    <dimen name="space_margin_top_normal_small">15dp</dimen>
+    <dimen name="space_margin_top_large">26dp</dimen>
+
+    <!--left and right space -->
+    <dimen name="space_left_and_right_smallest">3dp</dimen>
+    <dimen name="space_left_and_right_small">4dp</dimen>
+    <dimen name="space_left_and_right_normal_small">6dp</dimen>
+    <dimen name="space_left_and_right">11dp</dimen>
+    <dimen name="space_left_and_right_large">11dp</dimen>
+
+    <!--receipt preview space -->
+    <dimen name="receipt_preview_height">450dp</dimen>
+    <dimen name="receipt_preview_top">23dp</dimen>
+    <dimen name="receipt_preview_start_end">30dp</dimen>
+    <dimen name="receipt_preview_padding_start_end">23dp</dimen>
+    <dimen name="receipt_preview_padding_bottom">75dp</dimen>
+
+    <!-- new font size -->
+    <!--<dimen name="font_size_smallest_small">9sp</dimen>-->
+    <!--<dimen name="font_size_smallest">11sp</dimen>-->
+    <!--<dimen name="font_size_smaller">11sp</dimen>-->
+    <!--<dimen name="font_size_small">12sp</dimen>-->
+    <!--<dimen name="font_size_normal_small">14sp</dimen>-->
+    <!--<dimen name="font_size_normal">15sp</dimen>-->
+    <!--<dimen name="font_size_large">17sp</dimen>-->
+    <!--<dimen name="font_size_larger">19sp</dimen>-->
+    <!--<dimen name="font_size_largest">27sp</dimen>-->
+    <!--<dimen name="font_size_stander_small">9sp</dimen>-->
+    <!--<dimen name="font_size_stander_normal">12sp</dimen>-->
+    <!--<dimen name="font_size_stander_large">14sp</dimen>-->
+    <!--<dimen name="font_size_stander">9sp</dimen>-->
+
+    <dimen name="font_size_smallest_small">11sp</dimen>
+    <dimen name="font_size_smallest">13sp</dimen>
+    <dimen name="font_size_smaller">14sp</dimen>
+    <dimen name="font_size_small">14sp</dimen>
+    <dimen name="font_size_normal_small">16sp</dimen>
+    <dimen name="font_size_normal">18sp</dimen>
+    <dimen name="font_size_large">21sp</dimen>
+    <dimen name="font_size_larger">23sp</dimen>
+    <dimen name="font_size_largest">32sp</dimen>
+    <dimen name="font_size_stander_small">11sp</dimen>
+    <dimen name="font_size_stander_normal">14sp</dimen>
+    <dimen name="font_size_stander_large">16sp</dimen>
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <dimen name="drawable_circle_red">18dp</dimen>
+
+    //margin right
+    <dimen name="margin_rignt_normal">40dp</dimen>
+
+</resources>
+
