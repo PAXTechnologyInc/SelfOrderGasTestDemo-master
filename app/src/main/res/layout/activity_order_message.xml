@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_layout" />
+
+    <ImageView
+        android:layout_width="@dimen/img_item_height"
+        android:layout_height="@dimen/img_item_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space_height_larger"
+        android:src="@drawable/order_succ" />
+
+    <TextView
+        android:id="@+id/order_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_size_normal"
+        android:gravity="center|center_horizontal"
+        android:paddingTop="20dp"
+        android:text="@string/order_message"
+        android:textColor="@color/primary_black_color"
+        android:textSize="48sp" />
+
+<!--    <Button-->
+<!--        android:id="@+id/order_ok"-->
+<!--        android:layout_width="493dp"-->
+<!--        android:layout_height="@dimen/button_height"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@drawable/tv_order_corners"-->
+<!--        android:text="@string/ok"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="@dimen/font_size_normal"-->
+<!--        android:textStyle="bold" />-->
+
+
+</LinearLayout>

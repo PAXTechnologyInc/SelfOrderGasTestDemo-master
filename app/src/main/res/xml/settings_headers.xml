@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ ============================================================================
+  ~ = COPYRIGHT
+  ~               PAX TECHNOLOGY, Inc. PROPRIETARY INFORMATION
+  ~    This software is supplied under the terms of a license agreement or
+  ~    nondisclosure agreement with PAX  Technology, Inc. and may not be copied
+  ~    or disclosed except in accordance with the terms in that agreement.
+  ~        Copyright (C) 2017 -? PAX Technology, Inc. All rights reserved.
+  ~ Revision History:
+  ~ Date	                     Author	                        Action
+  ~ 17-11-27 下午5:41  	     zenglc           	    Create/Add/Modify/Delete
+  ~ ============================================================================
+  -->
+
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 商户 -->
+    <header
+        android:fragment="com.pax.order.settings.SettingTableNumFragment"
+        android:icon="@drawable/app_setting"
+        android:title="@string/settings_menu_merchant_parameter" />
+
+    <!-- stand-by time  -->
+    <header
+        android:fragment="com.pax.order.settings.SettingsStandByParamFragment"
+        android:icon="@drawable/app_setting"
+        android:title="@string/settings_menu_standby_parameter" />
+
+    <!-- 支付方式设置 -->
+    <header
+        android:fragment="com.pax.order.settings.PayModuleSettingFragment"
+        android:icon="@drawable/app_setting"
+        android:title="@string/pay_setting" />
+    <!-- 打印相关设置 -->
+    <header
+        android:fragment="com.pax.order.settings.PrintConfigSettingFragment"
+        android:icon="@drawable/app_setting"
+        android:title="@string/prn_config" />
+    <!-- Bluetook configuration -->
+    <header
+        android:fragment="com.pax.order.settings.BluetoothSettingFragment"
+        android:icon="@drawable/app_setting"
+        android:title="@string/bluetooth_setting" />
+
+    <!-- 操作员改密 -->
+    <header
+        android:fragment="com.pax.order.settings.OperatorModPWDrFragment"
+        android:icon="@drawable/app_modifypwd"
+        android:title="@string/modify_oper_pwd" />
+
+    <!-- 结算 -->
+    <header
+        android:fragment="com.pax.order.settings.BatchFragment"
+        android:icon="@drawable/app_settle"
+        android:title="@string/batch_menu" />
+
+    <!-- 清缓存 -->
+    <header
+        android:fragment="com.pax.order.settings.ClearCacheFragment"
+        android:icon="@drawable/app_down"
+        android:title="@string/clear_cache" />
+
+    <!-- 商户信息 -->
+    <header
+        android:fragment="com.pax.order.settings.StoreInfoFragment"
+        android:icon="@drawable/icon_store"
+        android:title="@string/store_info" />
+
+    <!-- 版本 -->
+    <header
+        android:fragment="com.pax.order.settings.VersionFragment"
+        android:icon="@drawable/app_version"
+        android:title="@string/settings_version" />
+
+    <!-- 退出 -->
+    <header
+        android:fragment="com.pax.order.settings.ExitFragment"
+        android:icon="@drawable/app_logout"
+        android:title="@string/settings_exit" />
+</preference-headers>

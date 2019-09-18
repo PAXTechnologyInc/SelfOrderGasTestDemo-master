@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ ============================================================================
+  ~ = COPYRIGHT
+  ~     PAX Computer Technology(Shenzhen) CO., LTD PROPRIETARY INFORMATION
+  ~     This software is supplied under the terms of a license agreement or
+  ~     nondisclosure agreement with PAX  Computer Technology(Shenzhen) CO., LTD.
+  ~     and may not be copied or disclosed except in accordance with the terms
+  ~     in that agreement.
+  ~          Copyright (C) 2018 -? PAX Computer Technology(Shenzhen) CO., LTD.
+  ~          All rights reserved.Revision History:
+  ~ Date                      Author                        Action
+  ~ 18-9-25 下午4:05           wangxf                 Create/Add/Modify/Delete
+  ~ ============================================================================
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_layout" />
+
+    <TextView
+        android:id="@+id/pininput_prompt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_size_normal" />
+
+    <TextView
+        android:id="@+id/pin_input_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_frame"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_size_larger" />
+
+</LinearLayout>

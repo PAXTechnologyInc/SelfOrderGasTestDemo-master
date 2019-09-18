@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="@dimen/space_size_normal">
+
+    <TextView
+        android:id="@+id/tvFullList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_fulllist_height"
+        android:background="@color/transparency"
+        android:text="@string/full_list"
+        android:textColor="@color/prompt_text_color"
+        android:textSize="@dimen/font_size_small"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_weight="4"
+        android:layout_height="0dp"
+        android:id="@+id/rvFullList"
+        android:layout_width="match_parent"
+
+        android:background="@drawable/layout_border">
+    </android.support.v7.widget.RecyclerView>
+    <!--android:layout_height="@dimen/rv_fulllist_height"-->
+
+    <TextView
+        android:id="@+id/tvMyList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_fulllist_height"
+        android:layout_marginTop="@dimen/space_size_large"
+        android:background="@color/transparency"
+        android:text="@string/my_item"
+        android:textColor="@color/prompt_text_color"
+        android:textSize="@dimen/font_size_small"/>
+
+    <LinearLayout
+        android:layout_weight="4"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/layout_border"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMyItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/imgAddItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_add_item"/>
+
+        <TextView
+            android:id="@+id/tvItemTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparency"
+            android:gravity="center"
+            android:text="@string/my_item_tip"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_size_small"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_person_height"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparency"
+            android:gravity="center"
+            android:text="@string/pserson_a"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_small"/>
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_size_normal"
+            android:background="@color/transparency"
+            android:gravity="center"
+            android:text="$0"
+            android:textColor="@color/orange_light"
+            android:textSize="@dimen/font_size_larger"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btConfirmItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space_size_large"
+        android:background="@drawable/tv_order_corners"
+        android:text="@string/confirm_item"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"/>
+
+</LinearLayout>

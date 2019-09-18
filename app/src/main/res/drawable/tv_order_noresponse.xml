@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ ============================================================================
+  ~ = COPYRIGHT
+  ~     PAX Computer Technology(Shenzhen) CO., LTD PROPRIETARY INFORMATION
+  ~     This software is supplied under the terms of a license agreement or
+  ~     nondisclosure agreement with PAX  Computer Technology(Shenzhen) CO., LTD.
+  ~     and may not be copied or disclosed except in accordance with the terms
+  ~     in that agreement.
+  ~          Copyright (C) 2018 -? PAX Computer Technology(Shenzhen) CO., LTD.
+  ~          All rights reserved.Revision History:
+  ~ Date                      Author                        Action
+  ~ 18-9-28 下午3:00           wangxf                 Create/Add/Modify/Delete
+  ~ ============================================================================
+  ~
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--这里是背景颜色-->
+    <solid android:color="@color/pay_bg_color" />
+    <!--这里是设置边框线的粗细和颜色-->
+    <stroke
+        android:width="0.03dp"
+        android:color="@color/gray" />
+
+    <padding
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp" />
+    <!--角的话，里边有参数可以单独设置-->
+    <corners android:radius="10dp" />
+
+</shape>

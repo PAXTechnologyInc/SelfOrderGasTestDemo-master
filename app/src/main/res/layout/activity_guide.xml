@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ ============================================================================
+  ~ = COPYRIGHT
+  ~     PAX Computer Technology(Shenzhen) CO., LTD PROPRIETARY INFORMATION
+  ~     This software is supplied under the terms of a license agreement or
+  ~     nondisclosure agreement with PAX  Computer Technology(Shenzhen) CO., LTD.
+  ~     and may not be copied or disclosed except in accordance with the terms
+  ~     in that agreement.
+  ~          Copyright (C) 2018 -? PAX Computer Technology(Shenzhen) CO., LTD.
+  ~          All rights reserved.Revision History:
+  ~ Date                      Author                        Action
+  ~ 18-8-9 上午10:24           wangxf                 Create/Add/Modify/Delete
+  ~ ============================================================================
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/guide_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:banner_pageChangeDuration="500"
+        app:banner_pointAutoPlayAble="true"
+        app:banner_pointAutoPlayInterval="5000"
+        app:banner_pointContainerBackground="@android:color/transparent"
+        app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
+        app:banner_pointTopBottomMargin="@dimen/space_size_normal_large"
+        app:banner_transitionEffect="alpha" />
+
+</LinearLayout>

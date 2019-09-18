@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertCardActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/pax_log_1"
+            android:layout_width="386dp"
+            android:layout_height="80dp"
+            android:foregroundGravity="right"
+            android:src="@drawable/pax_logo_1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_1"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/Insert_View"
+            android:layout_width="688dp"
+            android:layout_height="414dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ar8" />
+
+        <TextView
+            android:id="@+id/insert_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Insert/Tap Card/Device"
+            android:textSize="38sp" />
+    </LinearLayout>
+</RelativeLayout>

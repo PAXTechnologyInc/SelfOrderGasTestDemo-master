@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_666">#666666</color>
+    <color name="color_333">#333333</color>
+    <color name="color_999">#999999</color>
+
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0000FF</color>
+    <color name="littleBlue">#00FFFF</color>
+    <color name="green">#00FF00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="brown">#5C3317</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="orange">#FF9328</color>
+    <color name="gray">#BEBEBE</color>
+
+    <color name="sky_blue">#4A708B</color>
+    <color name="blue_light">#ff33b5e5</color>
+    <color name="draker_gray">#aaa</color>
+    <color name="light_slate_gray">#778899</color>
+    <color name="slate_gray">#708090</color>
+    <color name="drak_slate_gray">#2F4F4F</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="dim_gray">#696969</color>
+
+    <color name="orange_light">#ffffbb33</color>
+    <color name="transparency">#00000000</color>
+    <color name="tab_bg">#FFF5F5F5</color>
+
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="key_selected_color">#b8bcc0</color>
+    <color name="cancel_button_text">#333333</color>
+    <color name="key_normal_color">#ffffff</color>
+
+    <!-- unimportant text color -->
+    <color name="prompt_text_color">#858585</color>
+    <color name="textcolorselect">#00a7ed</color>
+    <color name="textcolorpressed">#fab53d</color>
+    <color name="textcolornomal">#ffffff</color>
+    <color name="home_tab_textcolornomal">#737373</color>
+    <color name="bgtabar">#f8f8f8</color>
+    <color name="textcolor_333333">#333333</color>
+    <color name="textcolor_999999">#999999</color>
+    <color name="textcolor_808080">#808080</color>
+    <color name="textcolor_212121">#212121</color>
+    <color name="textcolor_d36f16">#d36f16</color>
+    <color name="bg_006cc7">#006cc7</color>
+
+    <!-- primary background color -->
+    <color name="primary_yellow_color">#fecb0f</color>
+    <color name="primary_red_color">#f35147</color>
+    <color name="primary_black_color">#333431</color>
+    <color name="primary_gray_color">#e6e6e6</color>
+
+    <!-- pay textview color -->
+    <color name="pay_bg_color">#acacac</color>
+    <color name="pay_text_color">#7a7b78</color>
+
+    <!-- Toast background color -->
+    <color name="toast_background">#99000000</color>
+
+    <!-- Split way text background color -->
+    <color name="split_way_background">#f7f6f5</color>
+
+    <!-- Left type color -->
+    <color name="left_active_background">#FFFFFF</color>
+    <color name="left_normal_background">#e6e6e6</color>
+    <color name="left_active_textcolor">#333431</color>
+    <color name="left_normal_textcolor">#7a7b78</color>
+    <color name="left_indicator_color">#fecb0f</color>
+
+    <!-- Left type color -->
+    <color name="add_tip_textcolor">#202020</color>
+    <color name="add_tip_amountcolor">#f35147</color>
+    <color name="add_tip_tipcolor">#fecb0f</color>
+
+    <color name="divider_color">#e6e6e6</color>
+
+    <!-- Select goods color -->
+    <color name="select_goods_textcolor">#202020</color>
+    <color name="select_attr_textcolor">#737373</color>
+    <color name="select_count_textcolor">#333431</color>
+
+    <!-- Background color -->
+    <color name="colorPrimaryBackground">#ebebeb</color>
+
+    <!-- NewSoftKeyBoardPaxStyle -->
+    <color name="keyboard_blackground">#bababa</color>
+
+    <!-- KeyBoard background -->
+    <color name="keyboard_background_color">#cccccc</color>
+
+    <!-- input dailog -->
+    <color name="textview_infos">#ff666666</color>
+    <color name="textedit_hint">#999999</color>
+
+    <!-- swipe card error prompt -->
+    <color name="settings_background_color">#FFFFF6</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+
+    <color name="background">#65828e</color>
+    <color name="main_color">#ff9a00</color>
+    <color name="secondary_color">#BDBDBD</color>
+
+    <!-- longin button color -->
+    <color name="login_btn_bg_color">#DB7D25</color>
+    <color name="login_btn_bg_pressed_color">#BE6D1E</color>
+
+    <color name="text_gray">#a0a0a0</color>
+    <!-- For Passcode -->
+    <color name="black_shade">#666666</color>
+
+</resources>

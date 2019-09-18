@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~ ============================================================================
+  ~ = COPYRIGHT
+  ~     PAX Computer Technology(Shenzhen) CO., LTD PROPRIETARY INFORMATION
+  ~     This software is supplied under the terms of a license agreement or
+  ~     nondisclosure agreement with PAX  Computer Technology(Shenzhen) CO., LTD.
+  ~     and may not be copied or disclosed except in accordance with the terms
+  ~     in that agreement.
+  ~          Copyright (C) 2018 -? PAX Computer Technology(Shenzhen) CO., LTD.
+  ~          All rights reserved.Revision History:
+  ~ Date                      Author                        Action
+  ~ 18-12-27 下午3:19           wangxf                 Create/Add/Modify/Delete
+  ~ ============================================================================
+  ~
+  ~
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    android:title="@string/prn_config">
+
+
+    <!--<com.pax.order.settings.SettingsEditTextPreference-->
+        <!--android:capitalize="words"-->
+        <!--android:dialogTitle="@string/store_name"-->
+        <!--android:key="STORENAME"-->
+        <!--android:layout="@layout/prefs_list_et_item"-->
+        <!--android:negativeButtonText="@string/cancel"-->
+        <!--android:positiveButtonText="@string/affirm"-->
+        <!--android:title="@string/store_name"-->
+        <!--myview:defaultValue="PAXTestStore"-->
+        <!--myview:maxLength="512"-->
+        <!--myview:maxLines="1"-->
+        <!--myview:selectAllOnFocus="true"-->
+        <!--myview:singLine="true" />-->
+
+    <com.pax.order.settings.SettingsEditTextPreference
+        android:capitalize="words"
+        android:dialogTitle="@string/reference"
+        android:key="PRTREMARK"
+        android:layout="@layout/prefs_list_et_item"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/affirm"
+        android:title="@string/reference"
+        myview:defaultValue="welcome to out restaurant!"
+        myview:maxLength="512"
+        myview:maxLines="1"
+        myview:selectAllOnFocus="true"
+        myview:singLine="true" />
+
+    <!--<SwitchPreference-->
+        <!--android:key="PRTSWITCH"-->
+        <!--android:title="@string/pay_switch"-->
+        <!--android:layout="@layout/switch_prefs_item"-->
+        <!--android:summary="@string/pay_switch_summary"-->
+        <!--android:switchTextOn="@string/pay_switch_on"-->
+        <!--android:switchTextOff="@string/pay_switch_off"-->
+        <!--android:defaultValue="true"/>-->
+</PreferenceScreen>

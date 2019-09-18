@@ -1,0 +1,103 @@
+<!--
+  ~ ============================================================================
+  ~ = COPYRIGHT
+  ~               PAX TECHNOLOGY, Inc. PROPRIETARY INFORMATION
+  ~    This software is supplied under the terms of a license agreement or
+  ~    nondisclosure agreement with PAX  Technology, Inc. and may not be copied
+  ~    or disclosed except in accordance with the terms in that agreement.
+  ~        Copyright (C) 2017 -? PAX Technology, Inc. All rights reserved.
+  ~ Revision History:
+  ~ Date	                     Author	                        Action
+  ~ 17-11-27 下午5:27  	     zenglc           	    Create/Add/Modify/Delete
+  ~ ============================================================================
+  -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+
+    android:title="@string/settings_menu_merchant_parameter">
+
+    <com.pax.order.settings.SettingsEditTextPreference
+        android:capitalize="words"
+        android:dialogTitle="@string/user_name"
+        android:key="USERNAME"
+        android:layout="@layout/prefs_list_et_item"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/affirm"
+        android:title="@string/user_name"
+        myview:defaultValue="PAXTestTerminal01"
+        myview:maxLength="32"
+        myview:maxLines="1"
+        myview:selectAllOnFocus="true"
+        myview:singLine="true" />
+
+    <com.pax.order.settings.SettingsEditTextPreference
+        android:capitalize="words"
+        android:dialogTitle="@string/pass_word"
+        android:key="PASSWORD"
+        android:layout="@layout/prefs_list_et_item"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/affirm"
+        android:title="@string/pass_word"
+        myview:defaultValue="PAXTestTerminal01"
+        myview:maxLength="512"
+        myview:maxLines="1"
+        myview:selectAllOnFocus="true"
+        myview:singLine="true" />
+    <com.pax.order.settings.SettingsEditTextPreference
+        android:capitalize="words"
+        android:dialogTitle="@string/token"
+        android:key="TOKEN"
+        android:layout="@layout/prefs_list_et_item"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/affirm"
+        android:title="@string/token"
+        myview:defaultValue="PAXTestTerminal01"
+        myview:maxLength="512"
+        myview:maxLines="1"
+        myview:selectAllOnFocus="true"
+        myview:singLine="true" />
+
+    <com.pax.order.settings.SettingsEditTextPreference
+        android:capitalize="words"
+        android:dialogTitle="@string/table_id"
+        android:key="TABLEID"
+        android:layout="@layout/prefs_list_et_item"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/affirm"
+        android:title="@string/table_id"
+        myview:defaultValue="PAXTestTable01"
+        myview:maxLength="512"
+        myview:maxLines="1"
+        myview:selectAllOnFocus="true"
+        myview:singLine="true" />
+
+
+    <com.pax.order.settings.SettingsEditTextPreference
+        android:capitalize="words"
+        android:dialogTitle="@string/terminal_id"
+        android:key="TERMINALID"
+        android:layout="@layout/prefs_list_et_item"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/affirm"
+        android:title="@string/terminal_id"
+        myview:defaultValue="PAXTestTerminal01"
+        myview:maxLength="512"
+        myview:maxLines="1"
+        myview:selectAllOnFocus="true"
+        myview:singLine="true" />
+
+    <com.pax.order.settings.SettingsEditTextPreference
+        android:capitalize="words"
+        android:dialogTitle="@string/fcm_topic"
+        android:key="FCMTOPIC"
+        android:layout="@layout/prefs_list_et_item"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/affirm"
+        android:title="@string/fcm_topic"
+        myview:defaultValue="TestWatch"
+        myview:maxLength="512"
+        myview:maxLines="1"
+        myview:selectAllOnFocus="true"
+        myview:singLine="true" />
+
+</PreferenceScreen>

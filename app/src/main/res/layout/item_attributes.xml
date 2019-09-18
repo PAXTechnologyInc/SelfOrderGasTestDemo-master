@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvAttributes"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/textview_attr_height"
+        android:minWidth="@dimen/textview_attr_width"
+        android:gravity="center"
+        android:textColor="@color/primary_black_color"
+        android:textSize="@dimen/font_size_small">
+    </TextView>
+
+</LinearLayout>

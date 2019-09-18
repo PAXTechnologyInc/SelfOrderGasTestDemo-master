@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--alpha 渐变透明度动画效果
+scale 渐变尺寸伸缩动画效果
+translate 画面转换位置移动动画效果
+rotate 画面转移旋转动画效果-->
+<!--Interpolator 被用来修饰动画效果，定义动画的变化率，可以使存在的动画效果accelerated(加速)，
+decelerated(减速),repeated(重复),bounced(弹跳)等。-->
+<!-- fromAlpha:开始时透明度；toAlpha：结束时透明度；duration：动画持续时间 -->
+<alpha
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="500"
+    android:fromAlpha="0.0"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:toAlpha="1.0"/>
+    <!--AccelerateDecelerateInterpolator 在动画开始与结束的地方速率改变比较慢，在中间的时候加速-->

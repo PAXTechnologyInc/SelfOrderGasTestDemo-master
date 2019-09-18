@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="title_height">60px</dimen>
+    <dimen name="cart_bottom_height">95px</dimen>
+    <dimen name="tabs_height">93px</dimen>
+    <dimen name="tabs_interval">11px</dimen>
+    <dimen name="list_height">102px</dimen>
+    <dimen name="interval">1px</dimen>
+    <dimen name="hint_top1">38px</dimen>
+    <dimen name="hint_top2">28px</dimen>
+    <dimen name="setup_height">120px</dimen>
+    <dimen name="comm_choice_button_top">17px</dimen>
+    <dimen name="comm_choice_button_height">51px</dimen>
+    <dimen name="bluetooth_text_top">167px</dimen>
+    <dimen name="bluetooth_bottom_height">98px</dimen>
+    <dimen name="text_height">45px</dimen>
+    <dimen name="IP_button_top">36px</dimen>
+    <dimen name="IP_button_height">60dp</dimen>
+    <dimen name="sale_goods_height">376px</dimen>
+    <dimen name="sale_goods_verticalSpacing">9px</dimen>
+    <dimen name="goods_title_verticalSpacing">19px</dimen>
+    <dimen name="list_dividerHeight">15px</dimen>
+    <dimen name="cart_list_Height">235px</dimen>
+    <dimen name="cart_list_count_height">41px</dimen>
+    <dimen name="cart_list_top_bottom">24px</dimen>
+    <dimen name="report_list_Height">302px</dimen>
+    <dimen name="report_list_shop">66px</dimen>
+    <dimen name="report_list_goods">169px</dimen>
+    <dimen name="credit_button">90dp</dimen>
+
+    <dimen name="title_size">32px</dimen>
+    <dimen name="tabs">41px</dimen>
+    <dimen name="text_size1">30px</dimen>
+    <dimen name="text_size2">22px</dimen>
+    <dimen name="text_size3">19px</dimen>
+    <dimen name="hint_text1">47px</dimen>
+    <dimen name="hint_text2">34px</dimen>
+    <dimen name="bottom_image">28px</dimen>
+    <dimen name="cart_list_image_size">186px</dimen>
+    <dimen name="report_list_image_size">135px</dimen>
+
+    <dimen name="cart_bottom_button_width">126px</dimen>
+    <dimen name="horizontal_interval">46px</dimen>
+    <dimen name="button_left">24px</dimen>
+    <dimen name="hint_left">38px</dimen>
+    <dimen name="left1">51px</dimen>
+    <dimen name="left2">32px</dimen>
+    <dimen name="IP_button_width">130dp</dimen>
+    <dimen name="IP_button_left_right">50dp</dimen>
+    <dimen name="bluetooth_left1">55px</dimen>
+    <dimen name="bluetooth_left2">42px</dimen>
+    <dimen name="sale_goods_width">346px</dimen>
+    <dimen name="sale_goods_horizontalSpacing">9px</dimen>
+    <dimen name="goods_title_left">24px</dimen>
+    <dimen name="cart_list_count_width">165px</dimen>
+    <dimen name="cart_list_count_number_width">83px</dimen>
+    <dimen name="setting_text_size">24sp</dimen>
+
+    // main page screen setting
+    <dimen name="top_linear_layout_size">189dp</dimen>
+    <dimen name="listItemHeight">120dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+</resources>

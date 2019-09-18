@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <!--<TextView-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:id="@+id/split_tip"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:gravity="left|center_vertical"-->
+        <!--android:text="@string/addtip_tip"-->
+        <!--android:textSize="@dimen/font_size_small"-->
+        <!--android:textStyle="bold"/>-->
+
+    <LinearLayout
+        android:id="@+id/tip_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/space_size_large"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/space_size_large">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_total"
+            android:textColor="@color/add_tip_textcolor"
+            android:textSize="@dimen/font_size_stander_normal" />
+
+        <TextView
+            android:id="@+id/sub_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="$0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tax"
+            android:textColor="@color/add_tip_textcolor"
+            android:textSize="@dimen/font_size_stander_normal" />
+
+        <TextView
+            android:id="@+id/tax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="$0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/divider_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/need_pay"
+            android:textColor="@color/add_tip_textcolor"
+            android:textSize="@dimen/font_size_stander_normal" />
+
+        <TextView
+            android:id="@+id/need_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="$0"
+            android:textColor="@color/add_tip_amountcolor"
+
+            android:textSize="@dimen/font_size_large"
+            tools:text="$123.00" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/divider_color" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirm_tip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@drawable/tv_order_corners"
+        android:text="@string/confirm_tip"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+    <!--t"-->
+
+</LinearLayout>

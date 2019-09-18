@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- view背景色 -->
+    <solid android:color="@color/white" />
+    <!-- 边框颜色 宽度 -->
+    <stroke
+        android:width="0.03dp"
+        android:color="@color/primary_gray_color" />
+    <!-- 边框圆角 -->
+    <corners
+        android:bottomRightRadius="1dp"
+        android:topRightRadius="1dp"
+        android:bottomLeftRadius="1dp"
+        android:topLeftRadius="1dp"/>
+
+    <!--角的话，里边有参数可以单独设置-->
+    <corners android:radius="45dp" />
+</shape>

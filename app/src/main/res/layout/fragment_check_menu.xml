@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/layout_shopping_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom" />
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_height_largest"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/topay_total"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tv_order_corners"
+                android:text="@string/topay_total"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_normal_small"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/topay_split"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@+id/topay_total"
+                android:layout_marginTop="@dimen/space_height_large"
+                android:background="@drawable/tv_order_corners"
+                android:text="@string/topay_split"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_normal_small"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

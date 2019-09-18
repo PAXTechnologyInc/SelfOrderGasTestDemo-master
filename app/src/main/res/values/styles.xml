@@ -1,0 +1,127 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light.NoActionBar" />
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!--<item name="android:windowIsTranslucent" >true</item>-->
+    </style>
+
+    <style name="LauncherTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@mipmap/target_advert</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Anim_fade" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/fade_in_out</item>
+    </style>
+
+    <style name="Anim_left_right" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/fade_left_right</item>
+    </style>
+
+    <style name="Anim_bottom_top" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/fade_bottom_top</item>
+    </style>
+s
+    <style name="Anim_scale" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/scale</item>
+    </style>
+
+    <style name="Anim_rotate" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/rotate</item>
+    </style>
+
+    <style name="fade_left_right" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_to_right</item>
+    </style>
+
+    <style name="fade_in_out" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="fade_bottom_top" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_bottom</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_to_bottom</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_bottom</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_to_bottom</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="scale" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/scale_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/scale_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/scale_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/scale_out</item>
+    </style>
+
+    <style name="rotate" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/rotate_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/rotate_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/rotate_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/rotate_out</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.TabLayout" parent="android:Widget">
+        <item name="tabBackground">@drawable/tab_background</item>
+        <item name="tabIndicatorColor">#ff00ff</item>
+        <item name="tabIndicatorHeight">2dp</item>
+    </style>
+
+    <style name="popup_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/colorPrimaryBackground</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="dialog_blue_button" parent="android:Widget.Button">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">@drawable/common_button_background</item>
+        <item name="android:textSize">@dimen/font_size_smaller</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:textColor">@color/prompt_text_color</item>
+    </style>
+
+    <style name="BTSearch" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">Searching Bluetooth Devices …</item>
+        <item name="DialogSpotColor">@color/colorPrimaryDark</item>
+        <item name="DialogSpotCount">4</item>
+    </style>
+
+    <style name="BTConn" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">Connecting Bluetooth Devices …</item>
+        <item name="DialogSpotColor">@color/colorPrimaryDark</item>
+        <item name="DialogSpotCount">4</item>
+    </style>
+</resources>

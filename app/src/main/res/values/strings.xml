@@ -1,0 +1,281 @@
+<resources>
+    <string name="app_name">ORDER</string>
+    <string name="header_title">ORDER</string>
+
+    <!-- image workaround -->
+    <string name="image_desc"> </string>
+
+    <string name="cart_name">Cart</string>
+    <string name="cart_clear">Clear</string>
+    <string name="cart_sum">Sum:</string>
+    <string name="cart_total">Total:</string>
+    <string name="cart_back">CLEAR ALL</string>
+    <string name="cart_order">ORDER</string>
+    <string name="call_waiter">CALL WAITER</string>
+    <string name="clear_order">CLEAR ORDER</string>
+    <string name="pay_name">PAY</string>
+    <string name="spec_name">SPEC</string>
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="choose_shipping">Fill Up! Do You Still Want to Shipping?</string>
+    <string name="fill_reciept">Fuel Up! Do You Want Receipt?</string>
+    <string name="fuel_still">Still Fueling! Please Wait!</string>
+    <string name="credit_desc">Please Enter Your ZIP Code</string>
+    <string name="debit_desc">Please Enter Your PIN</string>
+
+    <string name="credit_alert">Please Enter Your valid ZIP Code</string>
+    <string name="debit_alert">Please Enter Your valid PIN</string>
+
+    <string name="lift_nozzle">Please Lift Nozzle and Select Grade</string>
+    <string name="approved">Approved</string>
+    <string name="begin_fuel">Begin Fueling</string>
+    <string name="fueling">Fueling...</string>
+    <string name="remove_card">Please Remove Your Card</string>
+
+    <string name="order_message">Successfully Ordered</string>
+    <string name="ok">OK</string>
+    <string name="more">More</string>
+    <string name="collapse">Collapse</string>
+
+    <!--Payment 左侧分栏-->
+    <string name="check_menu">Review Order</string>
+    <string name="split_select">Split Select</string>
+    <string name="item_select">Item Select</string>
+    <string name="add_tip">Payment</string>
+    <string name="use_card">Swipe/Insert/Tap</string>
+
+    <!--Payment Check Menu-->
+    <string name="topay_total">PAY</string>
+    <string name="topay_split">SPLIT CHECK</string>
+
+    <!--Split Select-->
+    <string name="split_tip">HOW SHOULD WE SPLIT YOUR CHECK?</string>
+    <string name="split_evenly_tip">Evenly</string>
+    <string name="split2_tip">Two Ways</string>
+    <string name="split3_tip">Three Ways</string>
+    <string name="split_item_tip">By Item</string>
+
+    <!--Payment Use Card-->
+    <string name="prn_order">Print Order</string>
+
+    <!--Payment Add Tip-->
+    <string name="sub_total">Sub Total:</string>
+    <string name="tax">Tax:</string>
+    <string name="tip">Tip:</string>
+    <string name="need_pay">Total:</string>
+    <string name="confirm_tip">CONFIRM</string>
+    <string name="addtip_tip">SELECT A TIP AMOUNT</string>
+
+    <!--Payment Item Select-->
+    <string name="full_list">Full List</string>
+    <string name="my_item">My Item</string>
+    <string name="my_item_tip">Please click the item of the full list</string>
+    <string name="pserson_a">Person A Total </string>
+    <string name="pserson_b">Person B Total </string>
+    <string name="pserson_other">Person Other Total </string>
+    <string name="confirm_item">CONFIRM ITEM</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="pay_fail">See cashier/Call waiter</string>
+
+
+    <string name="dialog_cancel">CANCEL</string>
+    <string name="dialog_print">PRINT</string>
+
+    <!--打印凭条内容-->
+    <string name="prn_header">Print Preview</string>
+    <string name="prn_table">Table:</string>
+    <string name="prn_storename">Restaurant:</string>
+    <string name="prn_ordernum">OrderNo:</string>
+    <string name="prn_ordertime">Time:</string>
+    <string name="prn_dishname">Names</string>
+    <string name="prn_dishunit">U/P</string>
+    <string name="prn_dishPrice">T/P</string>
+    <string name="prn_subtotal">Subtotal:</string>
+    <string name="prn_discount">Discount:</string>
+    <string name="prn_totalprice">TotalPrice:</string>
+    <string name="prn_totaltax">Tax:</string>
+    <string name="prn_totaltip">Tip:</string>
+    <string name="prn_total">Total</string>
+    <string name="prn_seq">Guests:</string>
+    <string name="prn_line">-----------------------------------</string>
+    <string name="prn_end">-----------Check Closed-----------</string>
+
+    <string name="prn_totalPay">Total:</string>
+    <string name="prn_batchNo">Batch Number:</string>
+    <string name="prn_cardType">Card Type:</string>
+    <string name="prn_account">Account:</string>
+    <string name="prn_entry">Entry:</string>
+    <string name="prn_mdse">MDSE:</string>
+    <string name="prn_tip">Tip:</string>
+    <string name="prn_authCode">Auth. Code:</string>
+    <string name="prn_refNum">Ref.NO.:</string>
+    <string name="prn_expireDate">Expire Date:</string>
+    <string name="prn_tc">TC:</string>
+    <string name="prn_tvr">TVR:</string>
+    <string name="prn_aid">AID:</string>
+    <string name="prn_iad">IAD:</string>
+    <string name="prn_tsi">TSI:</string>
+    <string name="prn_arc">ARC:</string>
+    <string name="prn_appn">APPN:</string>
+    <string name="prn_atc">ATC:</string>
+    <string name="prn_applab">APPLAB:</string>
+    <string name="prn_resMessage">Response:</string>
+
+    <!--结算相关-->
+    <string name="prn_batchline">************************************</string>
+    <string name="prn_batchTransName">Batch Report</string>
+    <string name="prn_cashAmt">Cash Totals:</string>
+    <string name="prn_cashCount">Cash Count:</string>
+    <string name="prn_checkAmt">Check Totals:</string>
+    <string name="prn_checkCount">Check Count:</string>
+    <string name="prn_creditAmt">Credit Totals:</string>
+    <string name="prn_creditCount">Credit Count:</string>
+    <string name="prn_debitAmt">Debit Totals:</string>
+    <string name="prn_debitCount">Debit Count:</string>
+    <string name="prn_sn">Terminal SN:</string>
+    <string name="prn_edc">EDC:</string>
+    <string name="prn_totalCount">Total Count:</string>
+    <string name="prn_overall">Overall:</string>
+    <string name="prn_endReport">End of Report</string>
+    <string name="prn_cash">Cash</string>
+    <string name="prn_check">Check</string>
+    <string name="prn_credit">Credit</string>
+    <string name="prn_debit">Debit</string>
+
+
+    <!-- 参数设置相关 -->
+    <string name="prompt_sys_pwd">Please Enter The Administrator Password</string>
+    <string name="input_len_err">Error Data Format</string>
+    <string name="input_number_err">Input minimum number is 20</string>
+    <string name="dialog_cancel_save">Cancel Save</string>
+    <string name="dialog_ok">OK</string>
+    <string name="cancel">cancel</string>
+    <string name="affirm">affirm</string>
+
+    <string name="settings_menu_merchant_parameter">Login Info</string>
+    <string name="settings_menu_standby_parameter">StandBy Info</string>
+    <string name="settings_exit">Exit</string>
+    <string name="settings_header_title">Settings</string>
+
+    <!-- 登陆参数 -->
+    <string name="user_name">UserName:</string>
+    <string name="pass_word">PassWord:</string>
+    <string name="token">Token:</string>
+    <!--终端参数-->
+    <string name="terminal_id">TerminalID:</string>
+    <string name="terminal_sn">TerminalSN:</string>
+    <string name="table_id">TableID:</string>
+    <string name="reference">Reference:</string>
+    <string name="pay_switch">Print Switch:</string>
+    <string name="pay_switch_on">On</string>
+    <string name="pay_switch_off">Off</string>
+    <string name="pay_switch_summary">set whether print a pay receipt or not</string>
+    <string name="pay_switch_value">true</string>
+
+    <!--商户信息 -->
+    <string name="store_info">Store Info</string>
+    <string name="store_name">Store name</string>
+    <string name="store_address1">Store address 1</string>
+    <string name="store_address2">Store address 2</string>
+    <string name="store_city">City</string>
+    <string name="store_zip">Zip</string>
+    <string name="store_phonenum">Phone number</string>
+    <string name="store_status">Status</string>
+    <string name="store_state">State</string>
+    <string name="store_country">country</string>
+
+    <!--版本-->
+    <string name="settings_version">About App</string>
+    <string name="welcome_soft_name">ORDER APP</string>
+    <string name="company_info">© 2018 PAX Technology Limited</string>
+    <string name="version_no">VER：1.00.00</string>
+    <string name="version_date">2018-9-25 16:09:36</string>
+    <!--结算-->
+    <string name="batch_menu">Batch</string>
+    <string name="do_batch">Batching..</string>
+    <!--操作员改密-->
+    <string name="modify_oper_pwd">Change Password</string>
+    <string name="manager_oper_id">Operator ID</string>
+    <string name="please_input_new_pwd">Please enter a new password</string>
+    <string name="psw_is_not_equal">Not Matched, Please Enter Again</string>
+    <string name="please_reinput_new_pwd">Please enter a new password again</string>
+    <string name="passwd_revise_succ">Change password success</string>
+    <string name="oper_is_not_exist">This operator does not exist</string>
+    <string name="please_enter_four_num">Please Enter 8 Digits</string>
+    <!--清缓存-->
+    <string name="clear_cache">Clear Disk Cache</string>
+    <string name="cache_size">Cache Size:</string>
+    <!--支付方式设置-->
+    <string name="pay_setting">Pay Setting</string>
+    <string name="pay_host_select">Select pay host:</string>
+    <string name="prn_config">Print Config</string>
+    <string name="bluetooth_setting">Bluetooth Setting</string>
+
+    <!--错误信息提示语-->
+    <string name="ordering">Ordering...</string>
+    <!--<string name="order_fail">The order failed, Please try again.</string>-->
+    <string name="order_fail">The order was not sent to the kitchen Please try again.</string>
+    <string name="order_fail_noproduct"> Some product have been soldout! Please delete them and re-order!</string>
+    <string name="download_adver_succ">download success!</string>
+    <string name="download_adver_fail">download fail,please try again in setting menu!</string>
+    <string name="order_succ_message">order success!</string>
+    <string name="order_fail_message">order failed!</string>
+    <string name="order_fail_noproduct_message">some product have been soldout!</string>
+    <string name="prn_nopaper">Oops! No paper!</string>
+    <string name="prn_broken">Oops! Printer broken!</string>
+    <string name="prn_lowpow">Oops! Low power! Please re-charge!</string>
+    <string name="prn_coveropen">Oops! Printer Cover opened!</string>
+    <string name="q20comm_err">Please disconnect the computer USB connection!</string>
+    <string name="upload_oder">Please wait for a while! Trans result is uploading...</string>
+    <string name="modify_ticket">Modify the ticket processing...</string>
+    <string name="modify_ticket_succ">Modify ticket succ</string>
+    <string name="modify_ticket_failed">Modify ticket failed</string>
+    <string name="modify_ticket_void">Ticket void!</string>
+    <string name="modify_ticket_no_exist">The order does not exist, please call the waiter.</string>
+    <string name="not_allow_split">Please to pay the total bill.</string>
+    <string name="error_amout">Amount error! Please check!</string>
+    <string name="zero_amout">Zero Amount! Pay Success!</string>
+    <string name="no_internet">No internet connection!</string>
+    <string name="msg_get_check">Have a new order.</string>
+    <string name="msg_ready_to_pay">The order ready to pay.</string>
+    <string name="msg_payment_complete">Order payment complete.</string>
+    <string name="msg_modify_ticket">Modify ticket success.</string>
+    <string name="table_status_processing">Get the table orders processing...</string>
+    <string name="table_status_failed">Get the table orders status failed.</string>
+    <string name="loading_orders">Loading orders...</string>
+    <string name="loading_orders_failed">Loading orders failed!</string>
+    <string name="loading_orders_noexist">Have no orders exist!</string>
+    <string name="verification_error">Verification error(Terminal username or password error)</string>
+    <string name="device_register">Device registration</string>
+    <string name="settle_complete">Settle Complete</string>
+
+    <!--下载提示语-->
+    <string name="Downloading">loading</string>
+    <string name="Processing">processing</string>
+    <string name="Download_success">DL Success!</string>
+
+    <!--待机时间-->
+    <string name="stand_by_time">StandBy Time(s):</string>
+
+    <!--消息推送主题-->
+    <string name="fcm_topic">FCM Topic</string>
+
+    <!--支付模块-->
+    <string name="posdk">com.pax.order.pay.posdk.PosdkPaymentImpl</string>
+    <string name="poslink">com.pax.order.pay.poslink.PosLinkPaymentImpl</string>
+    <string name="easylink">com.pax.order.pay.edc.EdcPaymentImpl</string>
+
+
+    <string name="table_num">table_num</string>
+    <string name="bluetooth_preference_key">bluetooth_preference_key</string>
+
+    <string name="bluetooth">Availiable equipment</string>
+    <string name="bottom_scan">Scan</string>
+    <string name="stop_scan">Stop Scan</string>
+    <string name="scan">Scan</string>
+    <string name="disconnected">Bluetooth Disconnect</string>
+    <string name="connect_fail"> Connect Fail</string>
+
+    <string name="bluetooth_setting_list">bluetooth_setting_list</string>
+    <string name="bluetooth_setting_prescreen">bluetooth_setting_prescreen</string>
+    <string name="title_activity_report_success">ReportSuccessActivity</string>
+</resources>

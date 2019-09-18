@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ ============================================================================
+  ~ = COPYRIGHT
+  ~     PAX Computer Technology(Shenzhen) CO., LTD PROPRIETARY INFORMATION
+  ~     This software is supplied under the terms of a license agreement or
+  ~     nondisclosure agreement with PAX  Computer Technology(Shenzhen) CO., LTD.
+  ~     and may not be copied or disclosed except in accordance with the terms
+  ~     in that agreement.
+  ~          Copyright (C) 2018 -? PAX Computer Technology(Shenzhen) CO., LTD.
+  ~          All rights reserved.Revision History:
+  ~ Date                      Author                        Action
+  ~ 18-10-9 下午3:24           wangxf                 Create/Add/Modify/Delete
+  ~ ============================================================================
+  ~
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_large"
+            android:text="@string/cache_size" />
+
+        <TextView
+            android:id="@+id/cache_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_large"
+            android:text="0MB" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_yellow_color"
+        android:text="@string/clear_cache" />
+
+</LinearLayout>

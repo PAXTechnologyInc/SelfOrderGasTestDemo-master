@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutItemSelected"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_item_select_height"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="GOODS"
+                    android:textColor="@color/select_goods_textcolor"
+                    android:textSize="@dimen/font_size_item" />
+
+                <TextView
+                    android:id="@+id/tvAttributes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Attributes None"
+                    android:textColor="@color/select_attr_textcolor"
+                    android:textSize="@dimen/font_size_smaller"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/underStockNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/pay_bg_color"
+                    android:textSize="@dimen/font_size_small"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/unitPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size_desc" />
+
+
+        <LinearLayout
+            android:id="@+id/item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgMinus"
+                android:layout_width="@dimen/img_add_width_large"
+                android:layout_height="@dimen/img_add_height_large"
+                android:gravity="center"
+                android:padding="@dimen/img_add_padding_normal"
+                android:src="@drawable/icon_minus" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="@dimen/textview_min_width"
+                android:text="0"
+                android:textColor="@color/select_count_textcolor"
+                android:textSize="@dimen/font_size_small" />
+
+            <ImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="@dimen/img_add_width_large"
+                android:layout_height="@dimen/img_add_height_large"
+                android:gravity="center"
+                android:padding="@dimen/img_add_padding_normal"
+                android:src="@mipmap/icon_add" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvCost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="$0"
+            android:textColor="@color/select_goods_textcolor"
+            android:textSize="@dimen/font_size_cost" />
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="@dimen/img_add_width_large"
+            android:layout_height="@dimen/img_add_height_large"
+            android:gravity="center"
+            android:padding="@dimen/img_add_padding_normal"
+            android:src="@mipmap/icon_error"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/divider_color" />
+</LinearLayout>

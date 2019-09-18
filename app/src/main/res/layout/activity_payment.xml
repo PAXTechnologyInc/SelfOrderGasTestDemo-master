@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/header_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <q.rorbin.verticaltablayout.VerticalTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="@dimen/tablayout_width"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:indicator_color="@color/left_indicator_color"
+            app:indicator_corners="2dp"
+            app:indicator_gravity="left"
+            app:indicator_width="0dp"
+            app:tabIndicatorHeight="0dp"
+            app:tab_height="@dimen/tablayout_height"
+            app:tab_margin="@dimen/space_size_smallest"
+            app:tab_mode="scrollable">
+        </q.rorbin.verticaltablayout.VerticalTabLayout>
+
+        <LinearLayout
+            android:layout_width="0.2dp"
+            android:layout_height="match_parent"
+            android:background="@color/divider_color"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/payment_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/space_size_small">
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

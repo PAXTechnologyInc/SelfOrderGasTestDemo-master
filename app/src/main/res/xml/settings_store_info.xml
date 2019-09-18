@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="@string/store_name"
+        android:title="@string/store_name"
+        android:persistent="false"/>
+    <Preference
+        android:key="@string/store_address1"
+        android:title="@string/store_address1"
+        android:persistent="false"/>
+
+    <Preference
+        android:key="@string/store_address2"
+        android:title="@string/store_address2"
+        android:persistent="false"/>
+    <Preference
+        android:key="@string/store_city"
+        android:title="@string/store_city"
+        android:persistent="false"/>
+
+    <Preference
+        android:key="@string/store_state"
+        android:title="@string/store_state"
+        android:persistent="false"/>
+    <Preference
+        android:key="@string/store_country"
+        android:title="@string/store_country"
+        android:persistent="false"/>
+    <Preference
+        android:key="@string/store_zip"
+        android:title="@string/store_zip"
+        android:persistent="false"/>
+    <Preference
+        android:key="@string/store_phonenum"
+        android:title="@string/store_phonenum"
+        android:persistent="false"/>
+    <Preference
+        android:key="@string/store_status"
+        android:title="@string/store_status"
+        android:persistent="false"/>
+
+</PreferenceScreen>

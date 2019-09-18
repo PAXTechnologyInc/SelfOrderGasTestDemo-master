@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ ============================================================================
+  ~ = COPYRIGHT
+  ~     PAX Computer Technology(Shenzhen) CO., LTD PROPRIETARY INFORMATION
+  ~     This software is supplied under the terms of a license agreement or
+  ~     nondisclosure agreement with PAX  Computer Technology(Shenzhen) CO., LTD.
+  ~     and may not be copied or disclosed except in accordance with the terms
+  ~     in that agreement.
+  ~          Copyright (C) 2018 -? PAX Computer Technology(Shenzhen) CO., LTD.
+  ~          All rights reserved.Revision History:
+  ~ Date                      Author                        Action
+  ~ 18-8-13 下午2:00           wangxf                 Create/Add/Modify/Delete
+  ~ ============================================================================
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="@dimen/space_size_large"
+            android:layout_marginStart="@dimen/space_size_large"
+            android:layout_marginTop="@dimen/space_margin_top_small"
+            android:contentDescription="@string/image_desc"
+            android:src="@drawable/print_preview_header" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/receipt_preview_height"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/receipt_preview_top">
+
+            <ScrollView
+                android:id="@+id/print_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/receipt_preview_start_end"
+                android:layout_marginStart="@dimen/receipt_preview_start_end">
+
+                <ImageView
+                    android:id="@+id/printPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/receipt_preview_start_end"
+                    android:layout_marginStart="@dimen/receipt_preview_start_end"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/print_preview_body"
+                    android:paddingBottom="@dimen/receipt_preview_padding_bottom"
+                    android:paddingEnd="@dimen/receipt_preview_padding_start_end"
+                    android:paddingStart="@dimen/receipt_preview_padding_start_end"
+                    android:scaleType="fitXY" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/button_background"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="3"
+                android:background="@drawable/selection_button_gray"
+                android:text="@string/dialog_cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/print_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="3"
+                android:background="@color/primary_yellow_color"
+                android:text="@string/dialog_print"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

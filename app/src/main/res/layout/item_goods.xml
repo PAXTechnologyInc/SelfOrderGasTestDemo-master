@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/img_item_height"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/space_size_smaller"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_size_normal_large"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOODS"
+            android:textColor="@color/primary_black_color"
+            android:textSize="@dimen/font_size_small" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="$ 100"
+            android:textColor="@color/primary_red_color"
+            android:textSize="@dimen/font_size_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgMinus"
+                android:layout_width="@dimen/img_add_width_larger"
+                android:layout_height="@dimen/img_add_height_larger"
+                android:gravity="left|center"
+                android:padding="@dimen/img_add_padding_normal"
+                android:src="@drawable/icon_minus"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="@dimen/textview_min_width"
+                android:text="0"
+                android:textColor="@color/primary_black_color"
+                android:textSize="@dimen/font_size_small"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="@dimen/img_add_width_larger"
+                android:layout_height="@dimen/img_add_height_larger"
+                android:gravity="center"
+                android:padding="@dimen/img_add_padding_normal"
+                android:src="@mipmap/icon_add" />
+
+            <RelativeLayout
+                android:id="@+id/layoutSpec"
+                android:layout_width="@dimen/rl_spec_width"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvSpec"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_spec_height"
+                    android:layout_marginTop="@dimen/space_size_small"
+                    android:background="@drawable/layout_spec_selected_shape"
+                    android:gravity="center"
+                    android:text="@string/spec_name"
+                    android:textColor="@color/primary_black_color"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/tvSpecCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/space_size_smallest"
+                    android:background="@drawable/circle_red"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_smallest_small"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

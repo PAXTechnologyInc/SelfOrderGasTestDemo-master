@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~ ============================================================================
+  ~ = COPYRIGHT
+  ~     PAX Computer Technology(Shenzhen) CO., LTD PROPRIETARY INFORMATION
+  ~     This software is supplied under the terms of a license agreement or
+  ~     nondisclosure agreement with PAX  Computer Technology(Shenzhen) CO., LTD.
+  ~     and may not be copied or disclosed except in accordance with the terms
+  ~     in that agreement.
+  ~          Copyright (C) 2018 -? PAX Computer Technology(Shenzhen) CO., LTD.
+  ~          All rights reserved.Revision History:
+  ~ Date                      Author                        Action
+  ~ 18-12-24 上午10:38           wangxf                 Create/Add/Modify/Delete
+  ~ ============================================================================
+  ~
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_host_select"
+        android:textColor="@color/primary_black_color"
+        android:textSize="@dimen/font_size_large" />
+
+    <com.pax.order.commonui.widget.MySpinner
+        android:id="@+id/paysetting_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.pax.order.commonui.widget.MySpinner>
+
+</LinearLayout>

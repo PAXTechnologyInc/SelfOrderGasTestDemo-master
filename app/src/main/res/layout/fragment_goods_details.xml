@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/header_layout"/>
+
+    <ImageView
+        android:id="@+id/img_details2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/img_details_height"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/space_size_smaller"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_size_smaller"
+        android:ellipsize="end"
+        android:scrollbars="vertical"
+        android:textColor="@color/select_goods_textcolor"
+        android:textSize="@dimen/font_size_small"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvShowMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_left_and_right_smallest"
+            android:text="@string/more"
+            android:textColor="@color/blue_light"
+            android:textSize="@dimen/font_size_small"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_item_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_margin_top_smaller"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GOODS"
+            android:textColor="@color/primary_black_color"
+            android:textSize="@dimen/font_size_large"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_add_width_large"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPrice_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="$ 100"
+                android:textColor="@color/primary_red_color"
+                android:textSize="@dimen/font_size_normal"/>
+
+            <LinearLayout
+                android:id="@+id/layoutAdd_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/tvMinus_details"
+                    android:layout_width="@dimen/img_add_width_larger"
+                    android:layout_height="@dimen/img_add_height_larger"
+                    android:gravity="center"
+                    android:padding="@dimen/img_add_padding_normal"
+                    android:src="@drawable/icon_minus"/>
+
+                <TextView
+                    android:id="@+id/count_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minWidth="@dimen/textview_min_width"
+                    android:text="0"
+                    android:textColor="@color/select_count_textcolor"
+                    android:textSize="@dimen/font_size_small"/>
+
+                <ImageView
+                    android:id="@+id/tvAdd_details1"
+                    android:layout_width="@dimen/img_add_width_larger"
+                    android:layout_height="@dimen/img_add_height_larger"
+                    android:gravity="center"
+                    android:padding="@dimen/img_add_padding_normal"
+                    android:src="@mipmap/icon_add"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAdd_details_default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/layout_spec_selected_shape"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/img_add_width"
+                    android:layout_height="@dimen/img_add_width"
+                    android:gravity="center"
+                    android:src="@mipmap/icon_add"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/add_to_cart"
+                    android:textColor="@color/primary_black_color"
+                    android:textSize="@dimen/font_size_smallest"/>
+            </LinearLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_size_normal"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/space_size_normal"
+            android:orientation="horizontal">
+
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/nsAttributesOne"
+                android:layout_width="@dimen/spinner_attr_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/space_size_smallest"
+                android:layout_gravity="left"
+                android:visibility="gone"
+                app:arrowTint="@color/primary_gray_color"
+                app:textTint="@color/left_normal_textcolor"/>
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/nsAttributesTwo"
+                android:layout_width="@dimen/spinner_attr_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/space_size_smallest"
+                android:layout_gravity="right"
+                app:arrowTint="@color/primary_gray_color"
+                app:textTint="@color/left_normal_textcolor"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/space_size_normal"
+            android:orientation="horizontal">
+
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/nsAttributesThree"
+                android:layout_width="@dimen/spinner_attr_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/space_size_smallest"
+                android:layout_gravity="left"
+                app:arrowTint="@color/primary_gray_color"
+                app:textTint="@color/left_normal_textcolor"/>
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/nsAttributesFour"
+                android:layout_width="@dimen/spinner_attr_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/space_size_smallest"
+                android:layout_gravity="right"
+                app:arrowTint="@color/primary_gray_color"
+                app:textTint="@color/left_normal_textcolor"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version ="1.0" encoding ="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    android:title="@string/settings_menu_merchant_parameter"
+    android:summary="...">
+    <ListPreference
+        android:key="@string/table_num"
+        android:title="Select Table Num"
+        >
+    </ListPreference>
+
+    <com.pax.order.settings.SettingsEditTextPreference
+        android:capitalize="words"
+        android:dialogTitle="@string/fcm_topic"
+        android:key="FCMTOPIC"
+        android:layout="@layout/prefs_list_et_item"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/affirm"
+        android:title="@string/fcm_topic"
+        myview:defaultValue="TestWatch"
+        myview:maxLength="512"
+        myview:maxLines="1"
+        myview:selectAllOnFocus="true"
+        myview:singLine="true" />
+
+
+
+</PreferenceScreen>
+
+
