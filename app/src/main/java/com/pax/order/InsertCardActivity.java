@@ -56,12 +56,11 @@ public class InsertCardActivity extends Activity implements SearchCardHelper.Sea
 
     @Override
     public void onReadCardOk(String track2){
-
         System.out.println("This is callback str in inserCardActivity:"+track2);
         String readerType = track2.split(":")[1];
         System.out.println("This is readerType:"+readerType);
         Intent intent;
-        intent = new Intent(InsertCardActivity.this, ZipcodePinInput.class);
+        intent = new Intent(InsertCardActivity.this, RemoveCardActivity.class);
         if(readerType.equals("MSR")){
             // show dialog to reject card
             global_var.setReadCardType(readerType);
@@ -79,15 +78,13 @@ public class InsertCardActivity extends Activity implements SearchCardHelper.Sea
 
     }
 
-
     private void startCheckCard() {
         long timeout=20000L;
         searchCardController = new SearchCardHelper(InsertCardActivity.this,"Insert",timeout);
         //            stopQChipTimer();
         searchCardController.closePolling();
         searchCardController.start(this);
-
-
+        global_var.setSetSearchCardObj( searchCardController);
     }
 
     private void stopQChipCheckCard() {

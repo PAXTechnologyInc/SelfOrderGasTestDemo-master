@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout_header"
+    android:id="@+id/layout_header1"
     android:layout_width="match_parent"
     android:layout_height="@dimen/space_height_larger"
     android:layout_alignParentTop="true"
@@ -9,11 +9,11 @@
 
     <ImageView
         android:id="@+id/menu_header_logo"
-        android:layout_width="@dimen/tablayout_width"
-        android:layout_height="match_parent"
+        android:layout_width="112dp"
+        android:layout_height="56dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/space_size_normal"
+        android:layout_marginLeft="16dp"
         android:src="@drawable/pax_logo_1" />
 
     <ImageView
@@ -38,17 +38,19 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
 
+            android:layout_marginRight="8dp"
             android:gravity="center"
             android:text="Fueling"
             android:textColor="@color/primary_black_color"
-            android:textSize="@dimen/font_size_normal"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/loading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/target_1" />
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/loading" />
     </LinearLayout>
 
 </RelativeLayout>

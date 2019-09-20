@@ -5,7 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/menu_header_layout_fueling"/>
+    <include
+        layout="@layout/menu_header_layout_fueling"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
 
     <FrameLayout
         android:id="@+id/menu_container"

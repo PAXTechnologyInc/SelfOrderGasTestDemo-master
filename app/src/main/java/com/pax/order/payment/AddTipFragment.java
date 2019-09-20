@@ -27,6 +27,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.clj.fastble.BleManager;
 import com.clj.fastble.callback.BleNotifyCallback;
@@ -650,9 +651,9 @@ public class AddTipFragment extends BaseFragment implements AddTipContract.View,
                         if(setCardNumber){
                             global_var.setCardNumber(card_number);
                             global_var.setExpiredDate(card_expired_date);
-                            global_var.setMagData(card_mag_data);
+                                    global_var.setMagData(card_mag_data);
 
-                            System.out.print("This is t global_var.getCardNumber:" +  global_var.getCardNumber());
+                            System.out.print("This is t global_var.getCardNumber:"+  global_var.getCardNumber());
                             System.out.print("This is t card_expired_date:" +  global_var.getExpiredDate());
                             intent = new Intent(mPaymentActivity.getBaseContext(), PinActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

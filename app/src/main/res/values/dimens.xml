@@ -59,6 +59,7 @@
     <dimen name="cart_list_count_width">165px</dimen>
     <dimen name="cart_list_count_number_width">83px</dimen>
     <dimen name="setting_text_size">24sp</dimen>
+    <dimen name="gas_text_size">48sp</dimen>
 
     // main page screen setting
     <dimen name="top_linear_layout_size">189dp</dimen>

@@ -33,8 +33,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.pax.order.AskReciptActivity;
 import com.pax.order.FinancialApplication;
-import com.pax.order.adver.GuideActivity;
 import com.pax.order.ParamConstants;
 import com.pax.order.R;
 import com.pax.order.commonui.dialog.MProgressDialog;
@@ -44,7 +46,6 @@ import com.pax.order.commonui.widget.InputPwdDialog;
 import com.pax.order.constant.GlobalVariable;
 import com.pax.order.entity.CartData.EOrderStatus;
 import com.pax.order.entity.DownloadItemData;
-import com.pax.order.entity.GoodsAttributes;
 import com.pax.order.entity.GoodsCategory;
 import com.pax.order.entity.GoodsItem;
 import com.pax.order.entity.MessgeCode;
@@ -55,7 +56,6 @@ import com.pax.order.entity.ProcessMessage;
 import com.pax.order.entity.TableOrderInfo;
 import com.pax.order.eventbus.FCMMessageEvent;
 import com.pax.order.logger.AppLog;
-import com.pax.order.orderserver.Impl.OrderInstance;
 import com.pax.order.payment.PaymentActivity;
 import com.pax.order.settings.SettingsParamActivity;
 import com.pax.order.util.ActivityStack;
@@ -86,9 +86,9 @@ public class MenuActivity extends MsgProActivity implements View.OnClickListener
     private RelativeLayout layoutCart;
     private RelativeLayout layoutPay;
     private ViewGroup anim_mask_layout;
-    private TextView tvCount_Cart, tvCount_Pay, tvCost, tvToPay, tvCallWaiter, tvClearOrder,tvShowTableId;
+    private TextView tvCount_Cart, tvCount_Pay, tvCost, menu_header_title, tvCallWaiter, tvClearOrder,tvShowTableId;
     private RelativeLayout mHeaderLayout;
-    private ImageView imgHeaderSetting;
+    private ImageView imgHeaderSetting, loading;
     private int cardItemAmount;
 
     private List<Fragment> mFragmentList;
@@ -218,7 +218,7 @@ public class MenuActivity extends MsgProActivity implements View.OnClickListener
         isDownCategoryOk = true;
         if (isDwonItemOk && isDownCategoryOk && isNeedRefresh) {
             //有更新和第一次刷新才进入
-            mHeaderLayout.setVisibility(View.GONE);
+//            mHeaderLayout.setVisibility(View.GONE);
             setupWithFragment(mFragmentManager, R.id.menu_container, mFragmentList);
             mMenuPresenter.toClearCart();
             //            mGoodsDisplayPresenter.upDateView();
@@ -245,6 +245,8 @@ public class MenuActivity extends MsgProActivity implements View.OnClickListener
 
         initData();
 //        initTimer();
+        // init view
+
 
         FinancialApplication.getApp().register(this);
 
@@ -269,9 +271,16 @@ public class MenuActivity extends MsgProActivity implements View.OnClickListener
                 }
             }
         }, 15000);
+
     }
 
     private void dialogShow(String text, final boolean isPickedItem){
+        View goodsDisplayFragView = mGoodsDisplayFragment.getView();
+
+        loading = (ImageView) goodsDisplayFragView.findViewById(R.id.loading);
+        menu_header_title  = (TextView) goodsDisplayFragView.findViewById(R.id.menu_header_title);
+        menu_header_title.setText("Filled Up");
+        loading.setVisibility(View.GONE);
         final AlertDialog alert = new AlertDialog.Builder(MenuActivity.this, AlertDialog.THEME_HOLO_DARK).create();
         alert.setCancelable(false);
         // alert.setContentView(R.layout.custom_dialog);
@@ -283,7 +292,7 @@ public class MenuActivity extends MsgProActivity implements View.OnClickListener
                     public void onClick(DialogInterface dialog,int which) {
                         alert.dismiss();
                         if(!isPickedItem){
-                            Intent intent = new Intent(MenuActivity.this, OrderMessageActivity.class);
+                            Intent intent = new Intent(MenuActivity.this, AskReciptActivity.class);
                             startActivity(intent);
                         }
                     }
@@ -297,7 +306,7 @@ public class MenuActivity extends MsgProActivity implements View.OnClickListener
                             Intent intent = new Intent(MenuActivity.this, ShoppingCartActivity.class);
                             startActivityForResult(intent, REQ_CART);
                         }else{
-                            Intent intent = new Intent(MenuActivity.this, OrderMessageActivity.class);
+                            Intent intent = new Intent(MenuActivity.this, AskReciptActivity.class);
                             startActivity(intent);
                         }
                     }
@@ -485,7 +494,7 @@ public class MenuActivity extends MsgProActivity implements View.OnClickListener
     public void initView() {
 
         anim_mask_layout = (RelativeLayout) findViewById(R.id.containerLayout);
-        mHeaderLayout = (RelativeLayout) findViewById(R.id.layout_header);
+        mHeaderLayout = (RelativeLayout) findViewById(R.id.layout_header1);
 
         imgHeaderSetting = (ImageView) findViewById(R.id.menu_header_setting);
         tvCount_Cart = (TextView) findViewById(R.id.tvCount_Cart);
@@ -495,10 +504,12 @@ public class MenuActivity extends MsgProActivity implements View.OnClickListener
         tvCallWaiter = (TextView) findViewById(R.id.tvCallWaiter);
         tvClearOrder = (TextView) findViewById(R.id.tvClearOrder);
         tvShowTableId = (TextView)findView(R.id.tvShowTableId);
-
         imgCart = (ImageView) findViewById(R.id.imgCart);
         layoutCart = (RelativeLayout) findViewById(R.id.layout_cart);
 //        layoutPay = (RelativeLayout) findViewById(R.id.layout_pay);
+
+
+        // onClick
         layoutCart.setOnClickListener(this);
 //        layoutPay.setOnClickListener(this);
         tvCallWaiter.setOnClickListener(this);
@@ -506,11 +517,12 @@ public class MenuActivity extends MsgProActivity implements View.OnClickListener
         imgHeaderSetting.setOnClickListener(this);
 
         System.out.println("MenuActivity initView");
-        mHeaderLayout.setVisibility(View.GONE);
         setupWithFragment(mFragmentManager, R.id.menu_container, mFragmentList);
         mMenuPresenter.toClearCart();
         // show table_status_processing.
 //        MProgressDialog.showProgress(MenuActivity.this, getString(R.string.table_status_processing));
+
+
     }
 
     private void initData() {

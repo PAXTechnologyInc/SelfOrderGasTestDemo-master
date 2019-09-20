@@ -109,7 +109,7 @@ public class FinancialApplication extends GlobalVariable {
         if (BuildConfig.DEBUG) {
             Stetho.initializeWithDefaults(this);
         }
-                mBackgroundExecutor = Executors.newFixedThreadPool(10, new ThreadFactory() {
+        mBackgroundExecutor = Executors.newFixedThreadPool(10, new ThreadFactory() {
             @Override
             public Thread newThread(@NonNull Runnable runnable) {
                 Thread thread = new Thread(runnable, "Background executor service");

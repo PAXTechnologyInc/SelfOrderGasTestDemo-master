@@ -25,7 +25,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.pax.order.R;
+import com.pax.order.constant.GlobalVariable;
 import com.pax.order.entity.GoodsCategory;
 import com.pax.order.entity.GoodsItem;
 import com.pax.order.menu.adapter.GoodsAdapter;
@@ -45,15 +48,17 @@ public class GoodsDisplayFragment extends BaseFragment implements View.OnClickLi
     public GoodsDisplayPresenter mGoodsDisplayPresenter;
     private MenuActivity mMenuActivity;
 
-    private ImageView imgHeaderSetting;
+    private ImageView imgHeaderSetting,loading;
     private TextView tvHeaderTitle;
     private VerticalTabLayout mTabLayout;
     private RecyclerView mItemListView;
     private GoodsAdapter mGoodsAdapter;
+    private GlobalVariable global_var;
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+//        global_var = ((GlobalVariable) this.getApplicationContext());
 
         mMenuActivity = (MenuActivity) mActivity;
         System.out.println("GoodsDisplayFragment created");
@@ -72,6 +77,11 @@ public class GoodsDisplayFragment extends BaseFragment implements View.OnClickLi
 //        tvHeaderTitle = (TextView) view.findViewById(R.id.menu_header_title);
         mItemListView = (RecyclerView) view.findViewById(R.id.itemListView);
         mTabLayout = (VerticalTabLayout) view.findViewById(R.id.tab_layout);
+
+        loading = (ImageView) view.findViewById(R.id.loading);
+        // gif
+        Glide.with(GoodsDisplayFragment.this).load(R.drawable.loading)
+                .asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(loading);
     }
 
     @Override

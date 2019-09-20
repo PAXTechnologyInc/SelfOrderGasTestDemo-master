@@ -16,8 +16,8 @@
     <string name="pay_name">PAY</string>
     <string name="spec_name">SPEC</string>
     <string name="add_to_cart">ADD TO CART</string>
-    <string name="choose_shipping">Fill Up! Do You Still Want to Shipping?</string>
-    <string name="fill_reciept">Fuel Up! Do You Want Receipt?</string>
+    <string name="choose_shipping">Filled Up! Do You Still Want to Continue Shipping?</string>
+    <string name="fill_reciept">Filled Up! Do You Want Receipt?</string>
     <string name="fuel_still">Still Fueling! Please Wait!</string>
     <string name="credit_desc">Please Enter Your ZIP Code</string>
     <string name="debit_desc">Please Enter Your PIN</string>
@@ -27,11 +27,12 @@
 
     <string name="lift_nozzle">Please Lift Nozzle and Select Grade</string>
     <string name="approved">Approved</string>
+    <string name="payment_processing">Processing...</string>
     <string name="begin_fuel">Begin Fueling</string>
     <string name="fueling">Fueling...</string>
     <string name="remove_card">Please Remove Your Card</string>
 
-    <string name="order_message">Successfully Ordered</string>
+    <string name="order_message">Thank You!</string>
     <string name="ok">OK</string>
     <string name="more">More</string>
     <string name="collapse">Collapse</string>

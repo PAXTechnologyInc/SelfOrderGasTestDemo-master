@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.clj.fastble.data.BleDevice;
 import com.pax.order.entity.OpenTicket;
+import com.pax.order.pay.controller.SearchCardHelper;
 import com.paxsz.easylink.api.EasyLinkSdkManager;
 
 import java.io.File;
@@ -29,6 +30,7 @@ public class GlobalVariable extends Application {
 
 
     private BleDevice bleDevice;
+
     private String EDCTpye = APPConstants.CREDIT;// cardType is Visa, Master, not EDCType
 
     public static final Set<String> EDC_set = new HashSet<>(Arrays.asList(APPConstants.CREDIT, APPConstants.DEBIT,
@@ -37,6 +39,15 @@ public class GlobalVariable extends Application {
     public static final Set<String> Global_AID = new HashSet<>(Arrays.asList("A0000000043060",
             "A0000000033010", "A0000000980840", "A0000000042203", "A0000006200620", "A0000001524010"));
 
+    public SearchCardHelper getSetSearchCardObj() {
+        return setSearchCardObj;
+    }
+
+    public void setSetSearchCardObj(SearchCardHelper setSearchCardObj) {
+        this.setSearchCardObj = setSearchCardObj;
+    }
+
+    private SearchCardHelper setSearchCardObj;
     private String card_type = null;
     private String base_amount = null;
     private String total_amount = base_amount;

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FastBleLib/FastBleLib.iml" filepath="$PROJECT_DIR$/FastBleLib/FastBleLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SelfOrderDemo-master.iml" filepath="$PROJECT_DIR$/SelfOrderDemo-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commonui/commonui.iml" filepath="$PROJECT_DIR$/commonui/commonui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dlfileslib/dlfileslib.iml" filepath="$PROJECT_DIR$/dlfileslib/dlfileslib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/keyboard/keyboard.iml" filepath="$PROJECT_DIR$/keyboard/keyboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nicsspinner/nicsspinner.iml" filepath="$PROJECT_DIR$/nicsspinner/nicsspinner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/passcodeview/passcodeview.iml" filepath="$PROJECT_DIR$/passcodeview/passcodeview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sdk/sdk.iml" filepath="$PROJECT_DIR$/sdk/sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/verticaltablayout/verticaltablayout.iml" filepath="$PROJECT_DIR$/verticaltablayout/verticaltablayout.iml" />
+    </modules>
+  </component>
+</project>

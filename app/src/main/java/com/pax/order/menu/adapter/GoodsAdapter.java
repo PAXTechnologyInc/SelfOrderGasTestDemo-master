@@ -38,6 +38,7 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.pax.order.FinancialApplication;
 import com.pax.order.R;
 import com.pax.order.entity.GoodsItem;
+import com.pax.order.menu.MenuActivity;
 import com.pax.order.util.AmountUtils;
 import com.pax.order.util.AnimationUtils;
 import com.pax.order.util.ImageUtils;
@@ -84,7 +85,7 @@ public class GoodsAdapter extends RecyclerView.Adapter<GoodsAdapter.ItemViewHold
     class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView name, price, tvCount, tvSpecCount;
         private GoodsItem mItem;
-        private ImageView imageView, imgAdd, imgMinus;
+        private ImageView imageView, imgAdd, imgMinus, loading;
         private RelativeLayout layoutSpec;
         private int mStock;
 
@@ -98,6 +99,7 @@ public class GoodsAdapter extends RecyclerView.Adapter<GoodsAdapter.ItemViewHold
             tvCount = (TextView) itemView.findViewById(R.id.count);
             imgMinus = (ImageView) itemView.findViewById(R.id.imgMinus);
             imgAdd = (ImageView) itemView.findViewById(R.id.imgAdd);
+
             imgMinus.setOnClickListener(this);
             imgAdd.setOnClickListener(this);
             imageView.setOnClickListener(this);

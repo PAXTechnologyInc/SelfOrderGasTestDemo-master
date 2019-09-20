@@ -8,8 +8,11 @@ import android.os.SystemClock;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.pax.dal.exceptions.IccDevException;
+import com.pax.dal.exceptions.MagDevException;
 import com.pax.order.FinancialApplication;
 import com.pax.order.R;
+import com.pax.order.adapter.CardReaderHelper;
 import com.pax.order.adapter.IccReader;
 import com.pax.order.adapter.MagReader;
 import com.pax.order.adapter.PiccReader;
@@ -26,7 +29,9 @@ import com.pax.order.util.TransTimeout;
 //import com.pax.order.eventbus.EventBusUtil;
 import com.pax.order.eventbus.SearchCardEvent;
 import com.paxus.common.type.TransResult;
-import com.pax.order.logger.AppLog;
+//import com.pax.order.logger.AppLog;
+
+import java.util.logging.Logger;
 
 /**
  * Created by Leon on 2017/8/15.
@@ -35,20 +40,22 @@ import com.pax.order.logger.AppLog;
 public class SearchCardHelper {
     private static final String TAG = "SearchCardHelper";
     private PollingResult pollingResult;
+    private PollingResult result;
     private Thread searchCardThread;
     private String entryMode;
     private MagReader magReader;
     private IccReader iccReader;
     private PiccReader piccReader;
-    private boolean isSupportInsert = false;
-    private boolean isSupportTap = false;
-    private boolean isSupportSwipe = false;
+    private boolean isSupportInsert = true;
+    private boolean isSupportTap = true;
+    private boolean isSupportSwipe = true;
     private TransTimeout transTimeout;
     private boolean isStopPolling = false;
     private boolean isTrack2Mandatory = false;
     private boolean isIccDisplay = false;
     private boolean isEnableSwipe = false;
     private boolean isDetectCard = false;
+    private boolean isRemoveCard = false;
     private Context context;
 
     Handler mHandler = new Handler(Looper.getMainLooper()) {
@@ -121,7 +128,7 @@ public class SearchCardHelper {
 
     public void start(final SearchCardCallback cardCallback) {
         if (!isSupportSwipe && !isSupportInsert && !isSupportTap) {
-            AppLog.e("SearchMode = 0");
+//            AppLog.e("SearchMode = 0");
             return;
         }
 
@@ -147,11 +154,12 @@ public class SearchCardHelper {
                         System.out.println("this is time out");
 
                         closePolling();
-                   cardCallback.onReadCardError(TransResult.ERR_TIMEOUT);
+                        cardCallback.onReadCardError(TransResult.ERR_TIMEOUT);
                         break;
                     }
                     // Arias 8 support one insert port with both icc and mrs
                     if (true) {
+//                        System.out.println("This is iccdecte:" + iccReader.detect((byte) 0));
                         if (isSupportInsert && iccReader.detect((byte) 0)) {
                             byte[] ret = iccReader.init((byte) 0);
                             if (ret != null) {
@@ -164,6 +172,8 @@ public class SearchCardHelper {
                                         isDetectCard = true;
                                         isIccDisplay = true;
                                     }
+                                    readCardOK(cardCallback);
+                                    break;
                                 } else {
                                     pollingResult.setReaderType(EReaderType.ICC);
                                     readCardOK(cardCallback);
@@ -173,7 +183,7 @@ public class SearchCardHelper {
                         } else {
                             isDetectCard = false;
                         }
-
+//                        System.out.println("This is magReader sw:" + magReader.isSwiped());
                         if (isSupportSwipe && magReader.isSwiped()) {
                             System.out.println("It appears after Looper.myLooper().quit()");
 
@@ -199,7 +209,9 @@ public class SearchCardHelper {
                         }
 
                         try {
-                            if (isSupportTap && null != piccReader.detect(EDetectMode.ISO14443_AB)) {
+                            Object piccResult = piccReader.detect(EDetectMode.ISO14443_AB);
+                            System.out.println("This is picc sw:" + piccResult);
+                            if (isSupportTap && null != piccResult) {
                                 SystemClock.sleep(500);
                                 if (magReader.isSwiped()) {
                                     continue;
@@ -209,7 +221,7 @@ public class SearchCardHelper {
                                 break;
                             }
                         } catch (PiccDevException e) {
-                            AppLog.e(e.getMessage());
+//                            AppLog.e(e.getMessage());
                             String errMsg = e.getErrMsg();
                             System.out.println("This is errMeg:" + errMsg);
 
@@ -220,6 +232,7 @@ public class SearchCardHelper {
                             }
                         }
                     } else {
+//                        System.out.println("This is icc sw1:" + iccReader.detect((byte) 0));
                         if (isSupportInsert && iccReader.detect((byte) 0)) {
                             //Fix ANDROIDNAT-365
                             byte[] ret = iccReader.init((byte) 0);
@@ -229,7 +242,7 @@ public class SearchCardHelper {
                             break;
                             //}
                         }
-
+//                        System.out.println("This is mag read sw1:" + magReader.isSwiped());
                         if (isSupportSwipe && magReader.isSwiped()) {
                             TrackData info = magReader.read();
                             if (info != null) {
@@ -253,6 +266,7 @@ public class SearchCardHelper {
                         }
 
                         try {
+//                            System.out.println("This ispiccReader.detect(EDetectMode.ISO14443_AB)1:" + piccReader.detect(EDetectMode.ISO14443_AB));
                             if (isSupportTap && null != piccReader.detect(EDetectMode.ISO14443_AB)) {
                                 SystemClock.sleep(500);
                                 if (magReader.isSwiped()) {
@@ -263,7 +277,7 @@ public class SearchCardHelper {
                                 break;
                             }
                         } catch (PiccDevException e) {
-                            AppLog.e(e.getMessage());
+//                            AppLog.e(e.getMessage());
                             String errMsg = e.getErrMsg();
 
                             if (errMsg != null && errMsg.contains("too many card")) {
@@ -275,7 +289,7 @@ public class SearchCardHelper {
                     }  //Aries8
                 }
 
-                toast(context,context.getString(R.string.remove_card));
+//                toast(context,context.getString(R.string.remove_card));
                 String track1 = pollingResult.getTrack1();
                 String track2 = pollingResult.getTrack2();
                 System.out.println("This is track2:" + track2);
@@ -292,6 +306,29 @@ public class SearchCardHelper {
                 Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+
+    public void removeCardOK(final SearchCardCallback cardCallback) {
+        transTimeout.stopTimer();
+
+
+        if (result.getReaderType() == EReaderType.MAG) {
+            closePolling();
+            cardCallback.onReadCardOk("MSR Removed");
+        } else if (result.getReaderType() == EReaderType.ICC) {
+            closeMag();
+            closePicc();
+            cardCallback.onReadCardOk("ICC Removed");
+//                cardCallback.onReadCardOk(new SearchCardAction.CardInformation(SearchCardAction.SearchMode.INSERT));
+        } else if (result.getReaderType() == EReaderType.PICC) {
+            closeIcc();
+            closeMag();
+            cardCallback.onReadCardOk("PICC Removed");
+//                cardCallback.onReadCardOk(new SearchCardAction.CardInformation(SearchCardAction.SearchMode.TAP));
+        }else{
+            cardCallback.onReadCardOk("default Removed");
+        }
     }
 
     private void readCardOK(final SearchCardCallback cardCallback) {
@@ -315,7 +352,117 @@ public class SearchCardHelper {
             closeMag();
             cardCallback.onReadCardOk(track2+":PICC");
 //                cardCallback.onReadCardOk(new SearchCardAction.CardInformation(SearchCardAction.SearchMode.TAP));
+        }else{
+            cardCallback.onReadCardOk(track2+":Def");
         }
+    }
+
+    public void isCardRemoved(final SearchCardCallback cardCallback){
+
+//        isDetectCard = true;
+
+        System.out.println("This is star to detect remove card");
+        if (!isSupportSwipe && !isSupportInsert && !isSupportTap) {
+//            AppLog.e("SearchMode = 0");
+            return;
+        }
+
+        System.out.println("This is star to detect card");
+
+        if (isSupportSwipe) {
+            magReader.open();
+            magReader.reset();
+        }
+
+        // 支持非接
+        if (isSupportTap) {
+            piccReader.open();
+//            App.getApp().runOnUiThreadDelay(() -> EventBusUtil.doEvent(new SearchCardEvent(SearchCardEvent.Status.CLSS_LIGHT_STATUS_READY_FOR_TXN)), 200);
+        }
+        isStopPolling = false;
+
+        searchCardThread = new Thread() {
+            public void run() {
+                pollingResult = new PollingResult();
+                transTimeout.start();
+                while (true) {
+                    if (transTimeout.isTimeout()) {
+                        System.out.println("this is time out");
+                        closePolling();
+                        cardCallback.onReadCardError(TransResult.ERR_TIMEOUT);
+                        break;
+                    }
+                    try{
+//                        if(null !=piccReader.detect(EDetectMode.ISO14443_AB)){
+//                            break;
+//                        }
+                        SystemClock.sleep(1000);
+                        Object result = piccReader.detect(EDetectMode.ISO14443_AB);
+                        boolean iccRemove = iccReader.detect((byte) 0);
+//                        boole
+                        System.out.println("icc:" + iccReader.detect((byte) 0));
+                        System.out.println("magReader:" + magReader.isSwiped());
+                        System.out.println("picc remove:" + result);
+
+                        if(null == result){
+                            break;
+                        }
+                    }catch (Exception e){
+                        System.out.println("This is detect error");
+                    }
+
+
+                }
+            }
+        };
+        searchCardThread.start();
+    }
+
+    public void warnRemove(final SearchCardCallback cardCallback){
+        searchCardThread = new Thread() {
+            public void run() {
+                System.out.println("This is -------------------------------");
+                try {
+                    int count = 0;
+                    while (true) {
+                        //don't use 60*1000, because of each action end will check this function, and waiting for timeout
+                        //helper = App.getDal().getCardReaderHelper();
+                        //result = helper.polling(EReaderType.ICC_PICC, 60*1000);
+                        System.out.println("This is warn");
+                        result = CardReaderHelper.getInstance().polling(EReaderType.ICC_PICC, 100);
+                        System.out.println("The result:"+result);
+                        if (result == null) {
+//                            Logger.e("NULL");
+                            removeCardOK(cardCallback);
+                            break;
+                        }
+                        EReaderType readerType = result.getReaderType();
+                        System.out.println("The readerType:"+readerType.getEReaderType());
+                        if (readerType == EReaderType.ICC || readerType == EReaderType.PICC) {
+                            System.out.println("this is readerType" + readerType);
+////                            if (transProcessListener != null)
+////                                transProcessListener.onShowWarn(message);
+//                            SystemClock.sleep(500);
+//                            String mode = App.getSysParam().get(SysParam.StringParam.EMV_CARD_REMOVE_BEEP);
+//                            if ((EmvRemoveCardBeep.ONE_BEEP.endsWith(mode) && count == 0) || EmvRemoveCardBeep.CONTINUOUS_BEEP.endsWith(mode)) {
+////                                Device.beepRemoveCard();
+//                                count = 1;
+//                                if (readerType == EReaderType.PICC) {
+//                                    com.pax.utils.eventbus.EventBusUtil.doEvent(new SearchCardEvent(SearchCardEvent.Status.CLSS_LIGHT_STATUS_ERROR));
+//                                }
+//                            }
+                        } else {
+                            removeCardOK(cardCallback);
+                            break;
+                        }
+                    }
+                } catch (MagDevException | IccDevException | PiccDevException e) {
+//                    Logger.e(e.getMessage());
+                    System.out.println("This is exception"+e.getMessage());
+                }
+            }
+        };
+        searchCardThread.start();
     }
 
     public PollingResult getPollingResult() {

@@ -79,16 +79,17 @@ public class GoodsDisplayPresenter extends BasePresenter<IView> implements Goods
         GoodsItem item8 = new GoodsItem(8, 1, "Treasurer", true, 19.99, 1, "Cigarette", "", R.drawable.treasurer_london_cigarette_brand, 1, emptyAttributes);
 
         // food
-        GoodsItem item9 = new GoodsItem(9, 1, "Burger", true, 4.50, 2, "Food", "", R.drawable.buger, 1,  emptyAttributes);
-        GoodsItem item10 = new GoodsItem(10, 1, "Sandwich", true, 9.99, 2, "Food", "", R.drawable.sandwich, 1, emptyAttributes);
-        GoodsItem item11 = new GoodsItem(11, 1, "Fruit Snack", true, 4.80, 2, "Food", "", R.drawable.apple_orchard_fruit_snacks, 1, emptyAttributes);
-        GoodsItem item12 = new GoodsItem(12, 1, "Bites Snack", true, 4.80, 2, "Food", "", R.drawable.skippy_bites_snacks, 1, emptyAttributes);
+        GoodsItem item9 = new GoodsItem(9, 1, "Burger", true, 4.50, 2, "Food", "", R.drawable.image_burger, 1,  emptyAttributes);
+        GoodsItem item10 = new GoodsItem(10, 1, "Sandwich", true, 9.99, 2, "Food", "", R.drawable.image_sandwich, 1, emptyAttributes);
+        GoodsItem item11 = new GoodsItem(11, 1, "Fruit Snack", true, 4.80, 2, "Food", "", R.drawable.image_fruit_snack, 1, emptyAttributes);
+        GoodsItem item12 = new GoodsItem(12, 1, "Bites Snack", true, 4.80, 2, "Food", "", R.drawable.image_bites_snack, 1, emptyAttributes);
 
         // beverage
-        GoodsItem item13 = new GoodsItem(13, 1, "Butter Soda", true, 4.50, 3, "Beverage", "", R.drawable.butter_soda, 1,  emptyAttributes);
-        GoodsItem item14 = new GoodsItem(14, 1, "Coca", true, 9.99, 3, "Beverage", "", R.drawable.coca, 1, emptyAttributes);
-        GoodsItem item15 = new GoodsItem(15, 1, "Water", true, 4.80, 3, "Beverage", "", R.drawable.water1, 1, emptyAttributes);
-        GoodsItem item16 = new GoodsItem(16, 1, "Ramune Melo", true, 4.80, 3, "Beverage", "", R.drawable.ramune_melo_soda, 1, emptyAttributes);
+        GoodsItem item13 = new GoodsItem(13, 1, "Coca", true, 4.50, 3, "Beverage", "", R.drawable.image_coca_cola, 1,  emptyAttributes);
+        GoodsItem item14 = new GoodsItem(14, 1, "Cracker", true, 9.99, 3, "Beverage", "", R.drawable.image_cracker, 1, emptyAttributes);
+        GoodsItem item15 = new GoodsItem(15, 1, "Fanta", true, 4.80, 3, "Beverage", "", R.drawable.image_fanta, 1, emptyAttributes);
+        GoodsItem item16 = new GoodsItem(16, 1, "Soda", true, 4.80, 3, "Beverage", "", R.drawable.image_soda, 1, emptyAttributes);
+        GoodsItem item17 = new GoodsItem(17, 1, "Sprite", true, 4.80, 3, "Beverage", "", R.drawable.image_sprite, 1, emptyAttributes);
 
 
         List<GoodsItem> itemsOne = new ArrayList<GoodsItem>();
@@ -108,14 +109,15 @@ public class GoodsDisplayPresenter extends BasePresenter<IView> implements Goods
         itemsOne.add(item14);
         itemsOne.add(item15);
         itemsOne.add(item16);
-        GoodsCategory categoryOne = new GoodsCategory(1, "Cigarette", 1, R.drawable.marlboro_cigarette_brand, itemsOne);
-        GoodsCategory categoryTwo = new GoodsCategory(2, "Food", 1, R.drawable.buger, itemsOne);
-        GoodsCategory categoryThree = new GoodsCategory(3, "Beverage", 1, R.drawable.coca, itemsOne);
+
+        GoodsCategory categoryOne = new GoodsCategory(1, "Cigarette", 1, R.drawable.icon_cigarette, itemsOne);
+        GoodsCategory categoryTwo = new GoodsCategory(2, "Food", 1, R.drawable.icon_food, itemsOne);
+        GoodsCategory categoryThree = new GoodsCategory(3, "Beverage", 1, R.drawable.icon_beverage, itemsOne);
 
         List<GoodsCategory> categoryList = new ArrayList<GoodsCategory>();
-        categoryList.add(categoryOne);
-        categoryList.add(categoryTwo);
         categoryList.add(categoryThree);
+        categoryList.add(categoryTwo);
+        categoryList.add(categoryOne);
 
 
         DownloadItemData.getInstance().setGoodsCategoryList(categoryList);

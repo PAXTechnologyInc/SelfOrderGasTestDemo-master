@@ -30,6 +30,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.pax.order.AskReciptActivity;
+import com.pax.order.InsertCardActivity;
+import com.pax.order.MainActivity;
 import com.pax.order.R;
 import com.pax.order.commonui.dialog.MDialogConfig;
 import com.pax.order.commonui.dialog.MProgressDialog;
@@ -248,7 +251,10 @@ public class ShoppingCartActivity extends MsgProActivity implements View.OnClick
         switch (v.getId()) {
             case R.id.cart_order:
                 if(global_var.isFuelUp()){
-                    dialogShow(getString(R.string.fill_reciept));
+//                    dialogShow(getString(R.string.fill_reciept));
+                    Intent intent = new Intent(ShoppingCartActivity.this, AskReciptActivity.class);
+                    startActivity(intent);
+                    System.out.print("Fild up");
                 }else{
                     Toast.makeText(ShoppingCartActivity.this,getString(R.string.fuel_still),
                             Toast.LENGTH_SHORT).show();

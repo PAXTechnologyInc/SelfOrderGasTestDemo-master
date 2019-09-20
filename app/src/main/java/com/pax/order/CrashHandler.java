@@ -30,64 +30,64 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CrashHandler implements Thread.UncaughtExceptionHandler {
-    private static final String PATH = "/sdcard/Crash/";
-    private static final String FILE_NAME = "crash";
-    private static final String FILE_NAME_SUFFIX = ".trace";
-    private static CrashHandler mInstance = new CrashHandler();
-    private Thread.UncaughtExceptionHandler mDefaultCrashHandler;
-    private Context mContext;
+  private static final String PATH = "/sdcard/Crash/";
+  private static final String FILE_NAME = "crash";
+  private static final String FILE_NAME_SUFFIX = ".trace";
+  private static CrashHandler mInstance = new CrashHandler();
+  private Thread.UncaughtExceptionHandler mDefaultCrashHandler;
+  private Context mContext;
 
-    private CrashHandler() {
+  private CrashHandler() {
 
+  }
+
+  public static CrashHandler getInstance() {
+    return mInstance;
+  }
+
+  public void init(Context context) {
+    mDefaultCrashHandler = Thread.getDefaultUncaughtExceptionHandler();
+    Thread.setDefaultUncaughtExceptionHandler(this);
+    mContext = context.getApplicationContext();
+  }
+
+  @RequiresApi(api = Build.VERSION_CODES.M)
+  @Override
+  public void uncaughtException(Thread thread, Throwable ex) {
+    try {
+      //导出异常信息到SD卡目录中存储
+      dumpExceptionToSDCard(ex);
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+    ex.printStackTrace();
 
-    public static CrashHandler getInstance() {
-        return mInstance;
+    if (mDefaultCrashHandler != null) {
+      mDefaultCrashHandler.uncaughtException(thread, ex);
+    } else {
+      FinancialApplication.finishAll();
+      Process.killProcess(Process.myPid());
     }
+  }
 
-    public void init(Context context) {
-        mDefaultCrashHandler = Thread.getDefaultUncaughtExceptionHandler();
-        Thread.setDefaultUncaughtExceptionHandler(this);
-        mContext = context.getApplicationContext();
+  private void dumpExceptionToSDCard(Throwable ex) throws IOException {
+    File dir = new File(PATH);
+    if (!dir.exists()) {
+      dir.mkdir();
     }
+    long current = System.currentTimeMillis();
+    String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(current));
+    File file = new File(PATH + FILE_NAME + time + FILE_NAME_SUFFIX);
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    @Override
-    public void uncaughtException(Thread thread, Throwable ex) {
-        try {
-            //导出异常信息到SD卡目录中存储
-            dumpExceptionToSDCard(ex);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ex.printStackTrace();
-
-        if (mDefaultCrashHandler != null) {
-            mDefaultCrashHandler.uncaughtException(thread, ex);
-        } else {
-            FinancialApplication.finishAll();
-            Process.killProcess(Process.myPid());
-        }
-    }
-
-    private void dumpExceptionToSDCard(Throwable ex) throws IOException {
-        File dir = new File(PATH);
-        if (!dir.exists()) {
-            dir.mkdir();
-        }
-        long current = System.currentTimeMillis();
-        String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(current));
-        File file = new File(PATH + FILE_NAME + time + FILE_NAME_SUFFIX);
-
-        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
-        pw.println(time);
-        pw.print("App Name:");
-        pw.println(FinancialApplication.getAppProcessName(mContext));
-        pw.print("App Version:");
-        pw.println(BuildConfig.VERSION_NAME);
-        pw.print("OS Version:");
-        pw.print(Build.VERSION.RELEASE);
-        ex.printStackTrace(pw);
-        pw.close();
-    }
+    PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+    pw.println(time);
+    pw.print("App Name:");
+    pw.println(FinancialApplication.getAppProcessName(mContext));
+    pw.print("App Version:");
+    pw.println(BuildConfig.VERSION_NAME);
+    pw.print("OS Version:");
+    pw.print(Build.VERSION.RELEASE);
+    ex.printStackTrace(pw);
+    pw.close();
+  }
 }

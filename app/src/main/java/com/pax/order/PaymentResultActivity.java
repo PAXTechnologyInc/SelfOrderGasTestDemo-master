@@ -4,15 +4,11 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.pax.order.menu.MenuActivity;
-import com.pax.order.pay.Pay;
 
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class PaymentResultActivity extends Activity {
 
@@ -24,21 +20,33 @@ public class PaymentResultActivity extends Activity {
         setContentView(R.layout.activity_payment_result);
         result_text = (TextView)findViewById(R.id.result_text);
 
-        progressDialog = new ProgressDialog(PaymentResultActivity.this);
-//        progressDialog.setMax(100);
-        progressDialog.setMessage("Processing....");
-//        progressDoalog.setTitle("");
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.show();
+//        progressDialog = new ProgressDialog(PaymentResultActivity.this);
+////        progressDialog.setMax(100);
+//        progressDialog.setMessage("Processing....");
+////        progressDoalog.setTitle("");
+//        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+//        progressDialog.show();
 
 
-        final Timer t = new Timer();
-        t.schedule(new TimerTask() {
-            public void run() {
-                progressDialog.dismiss(); // when the task active then close the dialog
-                t.cancel(); // also just top the timer thread, otherwise, you may receive a crash report
+//        final Timer t = new Timer();
+//        t.schedule(new TimerTask() {
+//            public void run() {
+////                progressDialog.dismiss(); // when the task active then close the dialog
+//                System.out.println("This is payment_processing");
+//                result_text.setText(R.string.payment_processing);
+//                t.cancel(); // also just top the timer thread, otherwise, you may receive
+//                // a crash report
+//            }
+//        }, 2000); //
+
+        // change text approved
+        Handler h=new Handler();
+        h.postDelayed(new Runnable(){
+            public void run(){
+                System.out.println("This is approval");
+                result_text.setText(R.string.payment_processing);
             }
-        }, 2000); //
+        }, 2000);
 
         // change text approved
         Handler h1=new Handler();

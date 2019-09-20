@@ -10,14 +10,15 @@
         android:id="@+id/linear_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="end"
+        android:layout_margin="5dp"
+        android:gravity="left"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="386dp"
-            android:layout_height="80dp"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
             android:layout_marginTop="5dp"
-            android:foregroundGravity="right"
+            android:foregroundGravity="left"
             android:src="@drawable/pax_logo_1" />
 
 
@@ -27,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/linear_2"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="90dp"
         android:gravity="end"
         android:orientation="vertical">
 
@@ -38,7 +39,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Please Enter Your ZIP Code"
-            android:textSize="38sp" />
+            android:textSize="@dimen/gas_text_size" />
 
         <EditText
             android:id="@+id/edit_input"

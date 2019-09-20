@@ -29,7 +29,7 @@ public class CarWashActivity extends Activity  implements View.OnClickListener{
     public void onClick(View v) {
 
         // direct to insert card activity
-        Intent intent = new Intent(CarWashActivity.this, InsertCardActivity.class);
+        Intent intent = new Intent(CarWashActivity.this, PaymentResultActivity.class);
         startActivity(intent);
     }
 }

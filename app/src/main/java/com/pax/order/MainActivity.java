@@ -40,7 +40,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
         }
 
         // direct to insert card activity
-        Intent intent = new Intent(MainActivity.this, CarWashActivity.class);
+        Intent intent = new Intent(MainActivity.this, InsertCardActivity.class);
+//        Intent intent = new Intent(MainActivity.this, MenuActivity.class);
         startActivity(intent);
     }
 }
